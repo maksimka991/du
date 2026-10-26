@@ -1,0 +1,2021 @@
+{
+  "pack_title": "Мої слова: 19.10 – 21.10 (Останні 10 слів)",
+  "category": "Словник · 19.10 – 21.10",
+  "pack_type": "word_list",
+  "description": "10 останніх слів зі списку користувача (die Straße, die Schwiegereltern, die Niederlande, der Anwalt, der Fehler, die Strafe, die Soße, am Telefon sprechen, telefonieren, günstig), побудовані з використанням слів за попередні дати.",
+  "cards": [
+    {
+      "headword": "die Straße",
+      "translation": "вулиця, дорога",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "f",
+      "plural": "die Straßen",
+      "forms_summary": "die Straße (Nom/Akk) · auf der Straße (Dat) · pl: die Straßen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Draußen ist die Straße heute sehr ruhig.",
+          "uk": "Надворі вулиця сьогодні дуже спокійна.",
+          "source": "Створено для навчання (словник 19.10)",
+          "grammar_tags": ["Nominativ", "Inversion", "draußen / ruhig"],
+          "complexity_notes": [
+            "Зворотний порядок слів (Inversion): на 1-му місці стоїть обставина місця draußen (надворі), тому дієслово ist залишається на 2-му місці перед підметом die Straße.",
+            "Речення об'єднує одразу три слова з вашого уроку за 19.10: draußen, die Straße та ruhig."
+          ],
+          "tokens": [
+            {
+              "word": "ist",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (sie ist) — на 2-му місці після draußen",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Дієслово-зв'язка з прикметником ruhig (спокійний)."
+              }
+            },
+            {
+              "word": "Straße",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Однина (die Straße) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Straße",
+                "plural_nom": "die Straßen",
+                "context_case": "Nominativ · Однина (die Straße)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Du musst auf der Straße vorsichtig sein und auf die Verkehrsschilder achten.",
+          "uk": "Ти мусиш бути обережним на дорозі та звертати увагу на дорожні знаки.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Dativ (auf der Straße)", "Модальна рамка", "Множина"],
+          "complexity_notes": [
+            "Зміна форми у Dativ: з вулицею/дорогою вживається прийменник auf. На питання Wo? (де?) жіночий артикль die змінюється на der: auf der Straße.",
+            "Модальна рамка (Satzklammer): модальне дієслово musst стоїть на 2-му місці, а інфінітиви vorsichtig sein та achten — у кінці відповідних частин.",
+            "Повторення ваших слів за попередні дати: vorsichtig sein (15.07) та das Verkehrsschild (05.10)."
+          ],
+          "tokens": [
+            {
+              "word": "musst",
+              "pos": "verb",
+              "frame_id": "frame_modal_strasse",
+              "context_role": "Модальне дієслово (рамка: musst ... sein / achten)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "müssen",
+                "praesens": "du musst",
+                "praeteritum": "du musstest",
+                "perfekt": "hat gemusst",
+                "note": "У 1-й та 3-й особі однини Präsens без умляута і без закінчення: ich/er muss."
+              }
+            },
+            {
+              "word": "Straße",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (auf der Straße) — де? (Wo?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Straße",
+                "plural_nom": "die Straßen",
+                "context_case": "Dativ · Однина (auf der Straße)"
+              }
+            },
+            {
+              "word": "sein",
+              "pos": "verb",
+              "frame_id": "frame_modal_strasse",
+              "context_role": "Інфінітив у виразі vorsichtig sein (бути обережним), залежить від musst",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Вираз зі списку 15.07: vorsichtig sein — бути обережним."
+              }
+            },
+            {
+              "word": "Verkehrsschilder",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Множина (auf die Verkehrsschilder) — керування achten auf + Akk",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Verkehrsschild",
+                "plural_nom": "die Verkehrsschilder",
+                "context_case": "Akkusativ · Множина (auf die Verkehrsschilder)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Weil viele Straßen wegen des Regens gesperrt waren, sind wir zu spät zum Flughafen gekommen.",
+          "uk": "Оскільки багато доріг були перекриті через дощ, ми запізнилися в аеропорт.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Множина (die Straßen)", "Підрядне з weil", "zu spät kommen"],
+          "complexity_notes": [
+            "Форма множини: die Straße → viele Straßen (додається закінчення -n).",
+            "Підрядне речення причини з weil стоїть на першому місці (дієслово waren у кінці перед комою), тому головне речення після коми починається одразу з допоміжного дієслова sind (рамка Perfekt: sind ... gekommen).",
+            "Активне повторення слів зі списку: der Regen (24.08), der Flughafen та zu spät kommen (14.10)."
+          ],
+          "tokens": [
+            {
+              "word": "Weil",
+              "pos": "conj",
+              "frame_id": "frame_weil_str",
+              "context_role": "Підрядний сполучник «оскільки / тому що» — переносить дієслово waren у кінець перед комою",
+              "popup": {
+                "type": "conj",
+                "title": "weil — тому що, оскільки",
+                "explanation": "Підрядний сполучник причини: змінюване дієслово (waren) іде в кінець підрядного речення."
+              }
+            },
+            {
+              "word": "Straßen",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Множина (viele Straßen) — підмет підрядного речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Straße",
+                "plural_nom": "die Straßen",
+                "context_case": "Nominativ · Множина (viele Straßen)"
+              }
+            },
+            {
+              "word": "waren",
+              "pos": "verb",
+              "frame_id": "frame_weil_str",
+              "context_role": "Präteritum · 3 ос. множини від sein (у кінці підрядного речення після weil)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "У пасивному стані результату (Zustandspassiv): waren gesperrt — були перекриті."
+              }
+            },
+            {
+              "word": "sind",
+              "pos": "verb",
+              "frame_id": "frame_perf_str",
+              "context_role": "Допоміжне дієслово Perfekt одразу після коми (рамка: sind ... gekommen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Дієслово руху kommen утворює Perfekt із допоміжним sein."
+              }
+            },
+            {
+              "word": "Flughafen",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (zum Flughafen = zu dem Flughafen)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Flughafen",
+                "plural_nom": "die Flughäfen",
+                "context_case": "Dativ · Однина (zum Flughafen)"
+              }
+            },
+            {
+              "word": "gekommen",
+              "pos": "verb",
+              "frame_id": "frame_perf_str",
+              "context_role": "Partizip II у виразі zu spät kommen (запізнюватися, список 14.10)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "kommen",
+                "praesens": "du kommst",
+                "praeteritum": "du kamst",
+                "perfekt": "ist gekommen",
+                "note": "Конструкція зі списку 14.10: zu spät kommen (ist zu spät gekommen) — запізнюватися."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "die Schwiegereltern",
+      "translation": "свекор і свекруха / тесть і теща",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "pl",
+      "plural": "die Schwiegereltern (Pl.)",
+      "forms_summary": "тільки множина: die Schwiegereltern (Nom/Akk) · den Schwiegereltern (Dat)",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Meine Schwiegereltern wohnen nicht weit von uns.",
+          "uk": "Мої тесть і теща (свекор і свекруха) живуть недалеко від нас.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Множина (Pluralwort)", "nicht weit von + Dat"],
+          "complexity_notes": [
+            "Слово die Schwiegereltern (як і die Eltern, die Ferien) вживається ТІЛЬКИ у множині, тому дієслово завжди має закінчення -en: wohnen.",
+            "Повторення конструкції зі списку 30.09: nicht weit von + Dativ (недалеко від когось/чогось)."
+          ],
+          "tokens": [
+            {
+              "word": "Schwiegereltern",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Множина (Meine Schwiegereltern) — підмет",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schwiegervater / die Schwiegermutter",
+                "plural_nom": "die Schwiegereltern (Pl.)",
+                "context_case": "Nominativ · Множина"
+              }
+            },
+            {
+              "word": "wohnen",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. множини (sie wohnen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "wohnen",
+                "praesens": "du wohnst",
+                "praeteritum": "du wohntest",
+                "perfekt": "hat gewohnt",
+                "note": "Узгоджується з множиною die Schwiegereltern."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Am Wochenende haben wir bei meinen Schwiegereltern auf dem Bauernhof übernachtet.",
+          "uk": "На вихідних ми переночували у моїх свекра і свекрухи на фермі.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Dativ Plural (-n)", "Perfekt (übernachtet)"],
+          "complexity_notes": [
+            "Прийменник bei (у когось вдома) завжди вимагає Dativ множини: bei meinen Schwiegereltern.",
+            "Дієслово übernachten (зі списку 04.09 та 30.09) має невідокремлюваний префікс über-, тому в Partizip II префікс ge- НЕ додається: haben ... übernachtet.",
+            "Також повторюємо слово der Bauernhof (ферма, 07.08)."
+          ],
+          "tokens": [
+            {
+              "word": "haben",
+              "pos": "verb",
+              "frame_id": "frame_perf_schwieger",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: haben ... übernachtet)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Schwiegereltern",
+              "pos": "noun_f",
+              "context_role": "Dativ · Множина (bei meinen Schwiegereltern) — у кого?",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Schwiegereltern",
+                "context_case": "Dativ · Множина (bei meinen Schwiegereltern)"
+              }
+            },
+            {
+              "word": "Bauernhof",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (auf dem Bauernhof — на фермі, список 07.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Bauernhof",
+                "plural_nom": "die Bauernhöfe",
+                "context_case": "Dativ · Однина (auf dem Bauernhof)"
+              }
+            },
+            {
+              "word": "übernachtet",
+              "pos": "verb",
+              "frame_id": "frame_perf_schwieger",
+              "context_role": "Partizip II дієслова übernachten (без ge-) у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "übernachten",
+                "praesens": "du übernachtest",
+                "praeteritum": "du übernachtetest",
+                "perfekt": "hat übernachtet",
+                "note": "Префікс über- тут ненаголошений і невідокремлюваний, тому Partizip II — übernachtet (без ge-)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Bevor meine Schwiegereltern zu Besuch kommen, müssen wir die ganze Wohnung gründlich aufräumen.",
+          "uk": "Перш ніж мої тесть і теща прийдуть у гості, ми мусимо ретельно прибрати всю квартиру.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Підрядне з bevor", "die Wohnung aufräumen"],
+          "complexity_notes": [
+            "Підрядне речення часу з bevor (перш ніж) виносить дієслово kommen перед комою, а головне речення після коми починається з модального дієслова müssen.",
+            "Повторюємо вираз зі списку 26.08 та 09.10: die Wohnung aufräumen (прибирати квартиру)."
+          ],
+          "tokens": [
+            {
+              "word": "Bevor",
+              "pos": "conj",
+              "frame_id": "frame_bevor_schw",
+              "context_role": "Підрядний сполучник часу («перш ніж») — дієслово kommen іде в кінець",
+              "popup": {
+                "type": "conj",
+                "title": "bevor — перш ніж",
+                "explanation": "Вводить підрядне речення часу. Дієслово стоїть перед комою."
+              }
+            },
+            {
+              "word": "Schwiegereltern",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Множина (meine Schwiegereltern) — підмет підрядного речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Schwiegereltern",
+                "context_case": "Nominativ · Множина"
+              }
+            },
+            {
+              "word": "kommen",
+              "pos": "verb",
+              "frame_id": "frame_bevor_schw",
+              "context_role": "Präsens · 3 ос. множини у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "kommen",
+                "praesens": "du kommst",
+                "praeteritum": "du kamst",
+                "perfekt": "ist gekommen",
+                "note": "Сталий вираз: zu Besuch kommen — приходити в гості."
+              }
+            },
+            {
+              "word": "müssen",
+              "pos": "verb",
+              "frame_id": "frame_modal_aufr",
+              "context_role": "Модальне дієслово одразу після коми (рамка: müssen ... aufräumen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "müssen",
+                "praesens": "du musst",
+                "praeteritum": "du musstest",
+                "perfekt": "hat gemusst",
+                "note": "Утворює рамку з інфінітивом aufräumen у кінці."
+              }
+            },
+            {
+              "word": "aufräumen",
+              "pos": "verb",
+              "frame_id": "frame_modal_aufr",
+              "context_role": "Інфінітив у кінці речення (від müssen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "aufräumen",
+                "praesens": "du räumst auf",
+                "praeteritum": "duäumtest auf",
+                "perfekt": "hat aufgeräumt",
+                "note": "Відокремлюваний префікс auf- (список 26.08 і 09.10: aufräumen — aufgeräumt)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "die Niederlande",
+      "translation": "Нідерланди",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "pl",
+      "plural": "die Niederlande (Pl.)",
+      "forms_summary": "завжди з артиклем у множині: in die Niederlande (Wohin? Akk) · in den Niederlanden (Wo? Dat)",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Wir fahren im Sommer in die Niederlande.",
+          "uk": "Влітку ми їдемо в Нідерланди.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Wohin? in die Niederlande (Akk)", "Країна у множині"],
+          "complexity_notes": [
+            "На відміну від більшості країн (nach Deutschland), die Niederlande — це іменник у множині з артиклем!",
+            "Тому на питання Wohin? (куди?) вживається прийменник in + Akkusativ множини: in die Niederlande (НЕ nach!)."
+          ],
+          "tokens": [
+            {
+              "word": "fahren",
+              "pos": "verb",
+              "context_role": "Präsens · 1 ос. множини (wir fahren) — дієслово руху (Wohin?)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "fahren",
+                "praesens": "du f[ä]hrst",
+                "praeteritum": "du fuhrst",
+                "perfekt": "ist gefahren",
+                "note": "Чергування в Präsens: a → ä (du fährst, er fährt). Perfekt із sein."
+              }
+            },
+            {
+              "word": "Sommer",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (im Sommer = in dem Sommer, список 24.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Sommer",
+                "plural_nom": "die Sommer",
+                "context_case": "Dativ · Однина (im Sommer — влітку)"
+              }
+            },
+            {
+              "word": "Niederlande",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Множина (in die Niederlande) — напрямок руху Wohin? (куди?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Niederlande",
+                "context_case": "Akkusativ · Множина (Wohin? → in die Niederlande)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Letztes Jahr haben wir unseren Urlaub in den Niederlanden am Meer verbracht.",
+          "uk": "Минулого року ми провели нашу відпустку в Нідерландах біля моря.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Wo? in den Niederlanden (Dativ Plural)", "Perfekt"],
+          "complexity_notes": [
+            "На питання Wo? (де?) die Niederlande ставиться у Dativ множини: артикль die змінюється на den, а до самого слова додається закінчення -n → in den Niederlanden!",
+            "Повторюємо слова зі списку 14.08: letztes Jahr, der Urlaub та das Meer."
+          ],
+          "tokens": [
+            {
+              "word": "haben",
+              "pos": "verb",
+              "frame_id": "frame_perf_nl",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: haben ... verbracht)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Urlaub",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (unseren Urlaub) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Urlaub",
+                "plural_nom": "die Urlaube",
+                "context_case": "Akkusativ · Однина (unseren Urlaub)"
+              }
+            },
+            {
+              "word": "Niederlanden",
+              "pos": "noun_f",
+              "context_role": "Dativ · Множина (in den Niederlanden, із закінченням -n) — де? (Wo?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Niederlande",
+                "context_case": "Dativ · Множина (Wo? → in den Niederlanden)"
+              }
+            },
+            {
+              "word": "Meer",
+              "pos": "noun_n",
+              "context_role": "Dativ · Однина (am Meer = an dem Meer — біля моря)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Meer",
+                "plural_nom": "die Meere",
+                "context_case": "Dativ · Однина (am Meer)"
+              }
+            },
+            {
+              "word": "verbracht",
+              "pos": "verb",
+              "frame_id": "frame_perf_nl",
+              "context_role": "Partizip II від мішаного дієслова verbringen (проводити час)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "verbringen",
+                "praesens": "du verbringst",
+                "praeteritum": "du verbrachtest",
+                "perfekt": "hat verbracht",
+                "note": "Мішане дієслово (як bringen → gebracht): verbringen → hat verbracht."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Ich freue mich schon sehr darauf, dass wir bald mit meinen Schwiegereltern in die Niederlande losfahren.",
+          "uk": "Я вже дуже радію (з нетерпінням чекаю) на те, що ми скоро вирушимо з моїми тестем і тещею в Нідерланди.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["sich freuen auf + Akk", "Підрядне з dass", "losfahren"],
+          "complexity_notes": [
+            "Конструкція зі списку 04.09: sich freuen auf + Akkusativ (з нетерпінням чекати майбутньої події). Перед підрядним реченням із dass використовується місток darauf.",
+            "У підрядному реченні після dass відокремлюваний префікс не відділяється: дієслово losfahren (вирушати, список 12.08) пишеться разом у самому кінці речення."
+          ],
+          "tokens": [
+            {
+              "word": "freue",
+              "pos": "verb",
+              "frame_id": "frame_freuen_nl",
+              "context_role": "Präsens · 1 ос. однини зворотного дієслова sich freuen auf + Akk",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sich freuen",
+                "praesens": "du freust dich",
+                "praeteritum": "du freutest dich",
+                "perfekt": "hat sich gefreut",
+                "note": "sich freuen auf + Akk — радіти майбутньому; sich freuen über + Akk — радіти тому, що вже сталося.",
+                "constructions": [
+                  {
+                    "pattern": "sich freuen auf + Akkusativ",
+                    "meaning": "з нетерпінням чекати на щось у майбутньому"
+                  }
+                ]
+              }
+            },
+            {
+              "word": "darauf",
+              "pos": "conj",
+              "frame_id": "frame_freuen_nl",
+              "context_role": "Займенниковий прислівник (da + r + auf) перед підрядним реченням із dass",
+              "popup": {
+                "type": "conj",
+                "title": "sich freuen darauf, dass...",
+                "explanation": "Поєднує керування дієслова (auf) із підрядним реченням."
+              }
+            },
+            {
+              "word": "Schwiegereltern",
+              "pos": "noun_f",
+              "context_role": "Dativ · Множина (mit meinen Schwiegereltern — після mit завжди Dativ)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Schwiegereltern",
+                "context_case": "Dativ · Множина"
+              }
+            },
+            {
+              "word": "Niederlande",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Множина (in die Niederlande) — куди? (Wohin?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Niederlande",
+                "context_case": "Akkusativ · Множина (in die Niederlande)"
+              }
+            },
+            {
+              "word": "losfahren",
+              "pos": "verb",
+              "context_role": "Präsens · 1 ос. множини у кінці підрядного речення (префікс los- не відділяється після dass!)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "losfahren",
+                "praesens": "du f[ä]hrst los",
+                "praeteritum": "du fuhrst los",
+                "perfekt": "ist losgefahren",
+                "note": "У головному реченні префікс відділяється (Wir fahren bald los), але в підрядному з'єднується знову (..., dass wir bald losfahren)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "der Anwalt",
+      "translation": "адвокат, юрист",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "m",
+      "plural": "die Anwälte",
+      "forms_summary": "der Anwalt (Nom) · den Anwalt (Akk) · dem Anwalt (Dat) · pl: die Anwälte",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Der Anwalt braucht heute deine Hilfe.",
+          "uk": "Адвокатові сьогодні потрібна твоя допомога.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Nominativ", "die Hilfe (16.10)"],
+          "complexity_notes": [
+            "Іменник der Anwalt виступає підметом у Nominativ (хто? — адвокат).",
+            "Повторюємо слово зі списку 28.09 та 16.10: die Hilfe (допомога) у ролі прямого додатка (Akkusativ: deine Hilfe)."
+          ],
+          "tokens": [
+            {
+              "word": "Anwalt",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (Der Anwalt) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Anwalt",
+                "plural_nom": "die Anwälte",
+                "context_case": "Nominativ · Однина (der Anwalt)"
+              }
+            },
+            {
+              "word": "braucht",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (er braucht + Akkusativ)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "brauchen",
+                "praesens": "du brauchst",
+                "praeteritum": "du brauchtest",
+                "perfekt": "hat gebraucht",
+                "note": "Перехідне дієслово: завжди керує Akkusativ (потребувати когось/чогось)."
+              }
+            },
+            {
+              "word": "Hilfe",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (deine Hilfe — допомогу, список 16.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Hilfe",
+                "plural_nom": "die Hilfen",
+                "context_case": "Akkusativ · Однина (deine Hilfe)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Ich habe gestern lange mit dem Anwalt über das Problem gesprochen.",
+          "uk": "Учора я довго розмовляв з адвокатом про цю проблему.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Dativ (mit dem Anwalt)", "Perfekt (gesprochen)", "sprechen über + Akk"],
+          "complexity_notes": [
+            "Після прийменника mit завжди вживається Dativ: чоловічий артикль der змінюється на dem → mit dem Anwalt.",
+            "Керування дієслова sprechen: розмовляти З кимось — mit + Dativ, розмовляти ПРО щось — über + Akkusativ (über das Problem).",
+            "Рамка Perfekt: habe ... gesprochen."
+          ],
+          "tokens": [
+            {
+              "word": "habe",
+              "pos": "verb",
+              "frame_id": "frame_perf_anwalt",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: habe ... gesprochen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Anwalt",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (mit dem Anwalt) — після прийменника mit",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Anwalt",
+                "plural_nom": "die Anwälte",
+                "context_case": "Dativ · Однина (mit dem Anwalt)"
+              }
+            },
+            {
+              "word": "gesprochen",
+              "pos": "verb",
+              "frame_id": "frame_perf_anwalt",
+              "context_role": "Partizip II сильного дієслова sprechen у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sprechen",
+                "praesens": "du spr[i]chst",
+                "praeteritum": "du sprachst",
+                "perfekt": "hat gesprochen",
+                "note": "Чергування в Präsens: e → i (du sprichst, er spricht). Ряд аблауту: e – a – o.",
+                "constructions": [
+                  {
+                    "pattern": "mit jemandem (Dativ) über etwas (Akkusativ) sprechen",
+                    "meaning": "розмовляти з кимось про щось"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Die beiden Anwälte haben mir erklärt, wie ich eine hohe Strafe vermeiden kann.",
+          "uk": "Обидва адвокати пояснили мені, як я можу уникнути високого штрафу.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Множина (die Anwälte)", "Непряме питання з wie", "die Strafe"],
+          "complexity_notes": [
+            "Форма множини der Anwalt отримує умляут і закінчення -e: die Anwälte.",
+            "Підрядне речення з питальним словом wie (як) є непрямим питанням, тому модальне дієслово kann іде в самий кінець після інфінітива vermeiden.",
+            "Поєднуємо зі словом die Strafe (штраф, 21.10) та прикметником hoch (високий, зі списку 30.09 der hohe Preis)."
+          ],
+          "tokens": [
+            {
+              "word": "Anwälte",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Множина (Die beiden Anwälte) — підмет",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Anwalt",
+                "plural_nom": "die Anwälte",
+                "context_case": "Nominativ · Множина (die Anwälte — з умляутом ä)"
+              }
+            },
+            {
+              "word": "erklärt",
+              "pos": "verb",
+              "context_role": "Partizip II від erklären (пояснювати комусь щось: mir erklärt)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "erklären",
+                "praesens": "du erklärst",
+                "praeteritum": "du erklärtest",
+                "perfekt": "hat erklärt",
+                "note": "Невідокремлюваний префікс er-: Partizip II без ge- (hat erklärt)."
+              }
+            },
+            {
+              "word": "Strafe",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (eine hohe Strafe) — прямий додаток від vermeiden",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Strafe",
+                "plural_nom": "die Strafen",
+                "context_case": "Akkusativ · Однина (eine hohe Strafe)"
+              }
+            },
+            {
+              "word": "vermeiden",
+              "pos": "verb",
+              "frame_id": "frame_sub_wie",
+              "context_role": "Інфінітив «уникати» перед модальним дієсловом kann у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "vermeiden",
+                "praesens": "du vermeidest",
+                "praeteritum": "du vermiedest",
+                "perfekt": "hat vermieden",
+                "note": "Сильне дієслово (ei → ie): vermeiden – vermied – hat vermieden."
+              }
+            },
+            {
+              "word": "kann",
+              "pos": "verb",
+              "frame_id": "frame_sub_wie",
+              "context_role": "Модальне дієслово в кінці підрядного речення після wie",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "У підрядному реченні стоїть у самому кінці після інфінітива."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "der Fehler",
+      "translation": "помилка",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "m",
+      "plural": "die Fehler",
+      "forms_summary": "der Fehler (Nom) · einen Fehler machen (Akk) · pl: die Fehler (без змін)",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Das war leider mein Fehler.",
+          "uk": "Це, на жаль, була моя помилка.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Nominativ", "Präteritum (war)", "leider (14.08)"],
+          "complexity_notes": [
+            "Після дієслова-зв'язки sein (тут у Präteritum — war) іменник стоїть у Nominativ: mein Fehler (чоловічий рід).",
+            "У німецькій «помилка» — чоловічого роду (der Fehler), на відміну від українського жіночого роду."
+          ],
+          "tokens": [
+            {
+              "word": "war",
+              "pos": "verb",
+              "context_role": "Präteritum · 3 ос. однини від sein (було)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "У розмовній мові для «був/було» майже завжди використовують коротку форму war."
+              }
+            },
+            {
+              "word": "Fehler",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (mein Fehler) — іменна частина присудка",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Fehler",
+                "plural_nom": "die Fehler",
+                "context_case": "Nominativ · Однина (mein Fehler)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Bei der Prüfung habe ich nur einen kleinen Fehler gemacht.",
+          "uk": "На іспиті я зробив лише одну маленьку помилку.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Akkusativ (einen Fehler)", "einen Fehler machen", "die Prüfung (09.10)"],
+          "complexity_notes": [
+            "Сталий вираз «зробити помилку» німецькою — einen Fehler machen (у чоловічому роді Akkusativ: ein → einen, klein → kleinen Fehler).",
+            "Повторюємо слово зі списку 09.10: die Prüfung (у Dativ після bei: bei der Prüfung)."
+          ],
+          "tokens": [
+            {
+              "word": "Prüfung",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (Bei der Prüfung — під час іспиту, список 09.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Prüfung",
+                "plural_nom": "die Prüfungen",
+                "context_case": "Dativ · Однина (bei der Prüfung)"
+              }
+            },
+            {
+              "word": "habe",
+              "pos": "verb",
+              "frame_id": "frame_perf_fehler",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: habe ... gemacht)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Fehler",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (einen kleinen Fehler) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Fehler",
+                "plural_nom": "die Fehler",
+                "context_case": "Akkusativ · Однина (einen Fehler machen)"
+              }
+            },
+            {
+              "word": "gemacht",
+              "pos": "verb",
+              "frame_id": "frame_perf_fehler",
+              "context_role": "Partizip II від machen у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "machen",
+                "praesens": "du machst",
+                "praeteritum": "du machtest",
+                "perfekt": "hat gemacht",
+                "note": "Сталий зворот: einen Fehler machen — припуститися помилки."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Wenn du aufmerksam liest, kannst du alle Fehler in der Bewerbung sofort finden.",
+          "uk": "Якщо ти читатимеш уважно, ти зможеш одразу знайти всі помилки в заяві на роботу.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Множина (alle Fehler)", "Підрядне з wenn", "die Bewerbung / aufmerksam (16.10)"],
+          "complexity_notes": [
+            "Форма множини der Fehler не має додаткового закінчення (alle Fehler), змінюється лише артикль der → die.",
+            "Це речення закріплює одразу 4 слова з вашого списку: wenn (24.07), aufmerksam і die Bewerbung (16.10), sofort (31.07)."
+          ],
+          "tokens": [
+            {
+              "word": "Wenn",
+              "pos": "conj",
+              "frame_id": "frame_wenn_fehler",
+              "context_role": "Підрядний сполучник умови («якщо / коли») — дієслово liest іде в кінець перед комою",
+              "popup": {
+                "type": "conj",
+                "title": "wenn — якщо, коли",
+                "explanation": "Підрядний сполучник умови або багаторазової дії. Змінюване дієслово йде в кінець підрядної частини."
+              }
+            },
+            {
+              "word": "liest",
+              "pos": "verb",
+              "frame_id": "frame_wenn_fehler",
+              "context_role": "Präsens · 2 ос. однини від lesen (зміна e → ie) у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "lesen",
+                "praesens": "du l[ie]st",
+                "praeteritum": "du lasest",
+                "perfekt": "hat gelesen",
+                "note": "Чергування в Präsens: e → ie (du liest, er liest)."
+              }
+            },
+            {
+              "word": "kannst",
+              "pos": "verb",
+              "frame_id": "frame_modal_fehler",
+              "context_role": "Модальне дієслово одразу після коми (рамка: kannst ... finden)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "Після підрядного речення головне починається одразу з дієслова: ..., kannst du..."
+              }
+            },
+            {
+              "word": "Fehler",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Множина (alle Fehler) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Fehler",
+                "plural_nom": "die Fehler",
+                "context_case": "Akkusativ · Множина (alle Fehler)"
+              }
+            },
+            {
+              "word": "Bewerbung",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (in der Bewerbung — у заяві на роботу, список 16.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Bewerbung",
+                "plural_nom": "die Bewerbungen",
+                "context_case": "Dativ · Однина (in der Bewerbung)"
+              }
+            },
+            {
+              "word": "finden",
+              "pos": "verb",
+              "frame_id": "frame_modal_fehler",
+              "context_role": "Інфінітив у самому кінці речення (залежить від kannst)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "finden",
+                "praesens": "du findest",
+                "praeteritum": "du fandest",
+                "perfekt": "hat gefunden",
+                "note": "2-га частина модальної рамки kannst ... finden."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "die Strafe",
+      "translation": "штраф, покарання",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "f",
+      "plural": "die Strafen",
+      "forms_summary": "die Strafe (Nom/Akk) · der Strafe (Dat) · pl: die Strafen · eine Strafe zahlen / bekommen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Die Strafe ist wirklich ziemlich teuer.",
+          "uk": "Штраф справді досить дорогий.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Nominativ", "wirklich / ziemlich / teuer (27.07)"],
+          "complexity_notes": [
+            "Базове речення з die Strafe у Nominativ однини.",
+            "Речення тренує одразу 3 слова з вашого уроку за 27.07: wirklich (справді), ziemlich (досить/доволі) та teuer (дорогий)."
+          ],
+          "tokens": [
+            {
+              "word": "Strafe",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Однина (Die Strafe) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Strafe",
+                "plural_nom": "die Strafen",
+                "context_case": "Nominativ · Однина (die Strafe)"
+              }
+            },
+            {
+              "word": "ist",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини від sein",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Дієслово-зв'язка."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Er hatte Pech und musste wegen des Fehlers eine hohe Strafe bezahlen.",
+          "uk": "Йому не пощастило, і він мусив через помилку заплатити високий штраф.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Akkusativ (eine Strafe bezahlen)", "Pech haben (01.10)", "Genitiv (wegen des Fehlers)"],
+          "complexity_notes": [
+            "Типова сполучуваність: eine Strafe bezahlen / zahlen (заплатити штраф) або eine Strafe bekommen (отримати штраф).",
+            "Прийменник причини wegen (через щось) вимагає Genitiv: der Fehler → wegen des Fehlers.",
+            "Повторюємо вираз Pech haben (не щастити, список 03.08 та 01.10) у формі Präteritum: er hatte Pech."
+          ],
+          "tokens": [
+            {
+              "word": "hatte",
+              "pos": "verb",
+              "context_role": "Präteritum від haben у виразі Pech haben (не щастити)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "Сталий вираз зі списку 01.10: Glück haben (щастити) / Pech haben (не щастити)."
+              }
+            },
+            {
+              "word": "musste",
+              "pos": "verb",
+              "frame_id": "frame_modal_strafe",
+              "context_role": "Präteritum модального дієслова müssen (рамка: musste ... bezahlen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "müssen",
+                "praesens": "du musst",
+                "praeteritum": "du musstest",
+                "perfekt": "hat gemusst",
+                "note": "У минулому часі модальні дієслова майже завжди вживаються у Präteritum: ich/er musste."
+              }
+            },
+            {
+              "word": "Fehlers",
+              "pos": "noun_m",
+              "context_role": "Genitiv · Однина (wegen des Fehlers — через помилку)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Fehler",
+                "plural_nom": "die Fehler",
+                "context_case": "Genitiv · Однина (des Fehlers)"
+              }
+            },
+            {
+              "word": "Strafe",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (eine hohe Strafe) — прямий додаток від bezahlen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Strafe",
+                "plural_nom": "die Strafen",
+                "context_case": "Akkusativ · Однина (eine Strafe bezahlen)"
+              }
+            },
+            {
+              "word": "bezahlen",
+              "pos": "verb",
+              "frame_id": "frame_modal_strafe",
+              "context_role": "Інфінітив у кінці речення (залежить від musste)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "bezahlen",
+                "praesens": "du bezahlst",
+                "praeteritum": "du bezahltest",
+                "perfekt": "hat bezahlt",
+                "note": "Невідокремлюваний префікс be-: Partizip II без ge- (hat bezahlt)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Wer an der roten Ampel nicht hält, bekommt sofort eine Strafe, deshalb solltest du unseren Anwalt fragen.",
+          "uk": "Хто не зупиняється на червоному світлофорі, одразу отримує штраф, тому тобі варто запитати нашого адвоката.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["halten (a → ä)", "die Ampel (26.08)", "der Anwalt (21.10)"],
+          "complexity_notes": [
+            "Це речення поєднує ваші слова з трьох уроків: die Ampel (світлофор, 26.08), halten (зупинятися, 31.08), sofort (31.07), die Strafe та der Anwalt (21.10).",
+            "Сильне дієслово halten у 3-й особі однини Präsens змінює голосну a → ä і не додає повторного -t: er hält."
+          ],
+          "tokens": [
+            {
+              "word": "Ampel",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (an der roten Ampel — на червоному світлофорі, список 26.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Ampel",
+                "plural_nom": "die Ampeln",
+                "context_case": "Dativ · Однина (an der Ampel)"
+              }
+            },
+            {
+              "word": "hält",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини від halten (зупинятися, список 31.08) у кінці підрядного з Wer",
+              "popup": {
+                "type": "verb",
+                "infinitive": "halten",
+                "praesens": "du h[ä]ltst",
+                "praeteritum": "du hieltest",
+                "perfekt": "hat gehalten",
+                "note": "Чергування в Präsens: a → ä (du hältst, er hält)."
+              }
+            },
+            {
+              "word": "bekommt",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (отримує) — головне дієслово після коми",
+              "popup": {
+                "type": "verb",
+                "infinitive": "bekommen",
+                "praesens": "du bekommst",
+                "praeteritum": "du bekamst",
+                "perfekt": "hat bekommen",
+                "note": "Означає «отримувати» (напр. eine Einladung bekommen, 20.07; eine Strafe bekommen)."
+              }
+            },
+            {
+              "word": "Strafe",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (eine Strafe) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Strafe",
+                "plural_nom": "die Strafen",
+                "context_case": "Akkusativ · Однина (eine Strafe)"
+              }
+            },
+            {
+              "word": "Anwalt",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (unseren Anwalt) — прямий додаток від fragen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Anwalt",
+                "plural_nom": "die Anwälte",
+                "context_case": "Akkusativ · Однина (unseren Anwalt)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "die Soße",
+      "translation": "соус",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "f",
+      "plural": "die Soßen",
+      "forms_summary": "die Soße (Nom/Akk) · mit der Soße (Dat) · pl: die Soßen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Die Soße mit Zwiebeln schmeckt mir sehr gut.",
+          "uk": "Соус із цибулею мені дуже смакує.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Nominativ", "schmecken + Dativ (28.08)", "die Zwiebel (16.10)"],
+          "complexity_notes": [
+            "Іменник die Soße тут є підметом (Nominativ однини).",
+            "Повторюємо дієслово зі списку Dativ-дієслів за 28.08: schmecken + Dativ (бути смачним комусь → schmeckt mir) та слово die Zwiebel (цибуля, 16.10)."
+          ],
+          "tokens": [
+            {
+              "word": "Soße",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Однина (Die Soße) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Soße",
+                "plural_nom": "die Soßen",
+                "context_case": "Nominativ · Однина (die Soße)"
+              }
+            },
+            {
+              "word": "Zwiebeln",
+              "pos": "noun_f",
+              "context_role": "Dativ · Множина (mit Zwiebeln — з цибулею, список 16.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Zwiebel",
+                "plural_nom": "die Zwiebeln",
+                "context_case": "Dativ · Множина (mit Zwiebeln)"
+              }
+            },
+            {
+              "word": "schmeckt",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (schmecken + Dativ: schmeckt mir)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "schmecken",
+                "praesens": "du schmeckst",
+                "praeteritum": "du schmecktest",
+                "perfekt": "hat geschmeckt",
+                "note": "Керує давальним відмінком (Dativ) особи, якій смакує їжа (список 28.08)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Ich habe aus Versehen die dunkle Soße auf mein sauberes Kleid verschüttet.",
+          "uk": "Я випадково пролив(ла) темний соус на свою чисту сукню.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Akkusativ", "verschütten (05.10)", "auf + Akk (Wohin?)"],
+          "complexity_notes": [
+            "Це речення активує одразу 4 слова з ваших попередніх уроків: dunkel і das Kleid (15.07), sauber (18.09) та verschütten (проливати/розливати, 05.10).",
+            "Куди пролив? (Wohin?) — auf + Akkusativ: auf mein sauberes Kleid."
+          ],
+          "tokens": [
+            {
+              "word": "habe",
+              "pos": "verb",
+              "frame_id": "frame_perf_sosse",
+              "context_role": "Допоміжне дієслово (рамка Perfekt: habe ... verschüttet)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Soße",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (die dunkle Soße) — прямий додаток від verschütten",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Soße",
+                "plural_nom": "die Soßen",
+                "context_case": "Akkusativ · Однина (die dunkle Soße)"
+              }
+            },
+            {
+              "word": "Kleid",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Однина (auf mein sauberes Kleid — куди? Wohin?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Kleid",
+                "plural_nom": "die Kleider",
+                "context_case": "Akkusativ · Однина (mein sauberes Kleid)"
+              }
+            },
+            {
+              "word": "verschüttet",
+              "pos": "verb",
+              "frame_id": "frame_perf_sosse",
+              "context_role": "Partizip II дієслова verschütten (проливати, список 05.10) у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "verschütten",
+                "praesens": "du verschüttest",
+                "praeteritum": "du verschüttetest",
+                "perfekt": "hat verschüttet",
+                "note": "Префікс ver- невідокремлюваний, тому Partizip II без ge-: verschüttet."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Kannst du mir bitte den großen Löffel geben, damit ich die Soße auf den Teller gießen kann?",
+          "uk": "Можеш, будь ласка, дати мені велику ложку, щоб я міг налити соус на тарілку?",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Підрядне з damit", "der Löffel (20.07)", "der Teller (17.07)"],
+          "complexity_notes": [
+            "Поєднуємо з уже знайомою конструкцією Kannst du mir ... geben, damit ... та словами der Löffel (ложка, 20.07) і der Teller (тарілка, 17.07).",
+            "Зверни увагу на Wohin? (куди налити?) → auf den Teller (Akkusativ чоловічого роду: der Teller → den Teller)."
+          ],
+          "tokens": [
+            {
+              "word": "Kannst",
+              "pos": "verb",
+              "frame_id": "frame_sosse_main",
+              "context_role": "Модальне дієслово на 1-му місці у проханні (рамка: Kannst ... geben)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "1-ша частина модальної рамки."
+              }
+            },
+            {
+              "word": "Löffel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (den großen Löffel — ложку, список 20.07)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Löffel",
+                "plural_nom": "die Löffel",
+                "context_case": "Akkusativ · Однина (den großen Löffel)"
+              }
+            },
+            {
+              "word": "geben",
+              "pos": "verb",
+              "frame_id": "frame_sosse_main",
+              "context_role": "Інфінітив у кінці головного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "Чергування в Präsens: e → i."
+              }
+            },
+            {
+              "word": "damit",
+              "pos": "conj",
+              "frame_id": "frame_sosse_sub",
+              "context_role": "Підрядний сполучник мети («щоб») — дієслово kann іде в кінець",
+              "popup": {
+                "type": "conj",
+                "title": "damit — щоб",
+                "explanation": "Підрядний сполучник мети."
+              }
+            },
+            {
+              "word": "Soße",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (die Soße) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Soße",
+                "plural_nom": "die Soßen",
+                "context_case": "Akkusativ · Однина (die Soße)"
+              }
+            },
+            {
+              "word": "Teller",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (auf den Teller — куди? Wohin?, список 17.07)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Teller",
+                "plural_nom": "die Teller",
+                "context_case": "Akkusativ · Однина (auf den Teller)"
+              }
+            },
+            {
+              "word": "kann",
+              "pos": "verb",
+              "frame_id": "frame_sosse_sub",
+              "context_role": "Модальне дієслово у кінці підрядного речення після damit",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "Замикає підрядне речення."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "am Telefon sprechen",
+      "translation": "розмовляти телефоном",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "verb",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "am Telefon sprechen · du sprichst / er spricht am Telefon · sprach · hat am Telefon gesprochen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Mit wem sprichst du gerade am Telefon?",
+          "uk": "З ким ти зараз розмовляєш телефоном?",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Präsens e → i (du sprichst)", "Mit wem? (24.07)", "gerade (24.07)"],
+          "complexity_notes": [
+            "У виразі am Telefon sprechen (= an dem Telefon, Dativ) сильне дієслово sprechen у 2-й і 3-й особі однини змінює кореневу голосну e → i: du sprichst, er spricht.",
+            "Повторюємо питальне слово зі списку 24.07: Mit wem? (З ким? — Dativ) та прислівник gerade (саме зараз)."
+          ],
+          "tokens": [
+            {
+              "word": "sprichst",
+              "pos": "verb",
+              "frame_id": "frame_am_tel_1",
+              "context_role": "Präsens · 2 ос. однини (du sprichst) — зміна кореневої голосної e → i",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sprechen",
+                "praesens": "du spr[i]chst",
+                "praeteritum": "du sprachst",
+                "perfekt": "hat gesprochen",
+                "note": "Чергування в Präsens: e → i (du sprichst, er spricht).",
+                "constructions": [
+                  {
+                    "pattern": "am Telefon sprechen (mit + Dativ)",
+                    "meaning": "розмовляти телефоном (з кимось)"
+                  }
+                ]
+              }
+            },
+            {
+              "word": "Telefon",
+              "pos": "noun_n",
+              "frame_id": "frame_am_tel_1",
+              "context_role": "Dativ · Однина у сталому виразі am Telefon (= an dem Telefon)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Telefon",
+                "plural_nom": "die Telefone",
+                "context_case": "Dativ · Однина (am Telefon)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Bitte stör mich nicht, denn ich habe gerade ein wichtiges Gespräch und spreche am Telefon.",
+          "uk": "Будь ласка, не заважай мені, бо я зараз маю важливу розмову і розмовляю телефоном.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["denn (24.07)", "stören (09.10)", "das Gespräch (07.10)"],
+          "complexity_notes": [
+            "Сполучник denn (бо, тому що — список 24.07) є сурядним і НЕ змінює порядок слів після себе: після нього йде підмет ich, а на 2-му місці — дієслово habe.",
+            "Повторюємо дієслово stören (турбувати/заважати, 09.10) та іменник das Gespräch (розмова, 07.10)."
+          ],
+          "tokens": [
+            {
+              "word": "stör",
+              "pos": "verb",
+              "context_role": "Imperativ (наказовий спосіб до du) від stören (заважати, список 09.10)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "stören",
+                "praesens": "du störst",
+                "praeteritum": "du störtest",
+                "perfekt": "hat gestört",
+                "note": "Керує Akkusativ: jemanden stören (Bitte stör mich nicht!)."
+              }
+            },
+            {
+              "word": "denn",
+              "pos": "conj",
+              "context_role": "Сурядний сполучник причини («бо, адже») — зберігає прямий порядок слів!",
+              "popup": {
+                "type": "conj",
+                "title": "denn — бо, тому що (позиція 0)",
+                "explanation": "На відміну від weil, сполучник denn займає нульову позицію і НЕ відправляє дієслово в кінець речення."
+              }
+            },
+            {
+              "word": "Gespräch",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Однина (ein wichtiges Gespräch — розмову, список 07.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Gespräch",
+                "plural_nom": "die Gespräche",
+                "context_case": "Akkusativ · Однина (ein Gespräch)"
+              }
+            },
+            {
+              "word": "spreche",
+              "pos": "verb",
+              "frame_id": "frame_am_tel_2",
+              "context_role": "Präsens · 1 ос. однини (ich spreche am Telefon — без зміни голосної в ich!)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sprechen",
+                "praesens": "du spr[i]chst",
+                "praeteritum": "du sprachst",
+                "perfekt": "hat gesprochen",
+                "note": "У 1-й особі однини коренева голосна e зберігається: ich spreche."
+              }
+            },
+            {
+              "word": "Telefon",
+              "pos": "noun_n",
+              "frame_id": "frame_am_tel_2",
+              "context_role": "Dativ · Однина у виразі am Telefon sprechen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Telefon",
+                "plural_nom": "die Telefone",
+                "context_case": "Dativ · Однина (am Telefon)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Wegen des großen Lärms auf der Straße habe ich kein Wort verstanden, als wir am Telefon gesprochen haben.",
+          "uk": "Через сильний шум на вулиці я не зрозумів жодного слова, коли ми розмовляли телефоном.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Perfekt (am Telefon gesprochen)", "der Lärm (10.08)", "verstehen / das Wort (07.10)"],
+          "complexity_notes": [
+            "Форма Perfekt виразу: hat am Telefon gesprochen. У підрядному реченні з als (коли — для одноразової дії в минулому) допоміжне дієслово haben стоїть у самому кінці після gesprochen.",
+            "Речення активує ваш словник за 10.08 (der Lärm — шум), 19.10 (die Straße) та 07.10 (das Wort, verstehen — verstanden)."
+          ],
+          "tokens": [
+            {
+              "word": "Lärms",
+              "pos": "noun_m",
+              "context_role": "Genitiv · Однина (Wegen des großen Lärms — через сильний шум, список 10.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Lärm",
+                "plural_nom": "— (незлічуваний)",
+                "context_case": "Genitiv · Однина (wegen des Lärms)"
+              }
+            },
+            {
+              "word": "Wort",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Однина (kein Wort — жодного слова, список 07.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Wort",
+                "plural_nom": "die Wörter / die Worte",
+                "context_case": "Akkusativ · Однина (kein Wort)"
+              }
+            },
+            {
+              "word": "verstanden",
+              "pos": "verb",
+              "context_role": "Partizip II від verstehen (розуміти, список 07.10)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "verstehen",
+                "praesens": "du verstehst",
+                "praeteritum": "du verstandest",
+                "perfekt": "hat verstanden",
+                "note": "Невідокремлюваний префікс ver-: verstehen – verstand – hat verstanden."
+              }
+            },
+            {
+              "word": "als",
+              "pos": "conj",
+              "frame_id": "frame_als_tel",
+              "context_role": "Підрядний сполучник часу «коли» (для минулого часу) — дієслово haben іде в кінець",
+              "popup": {
+                "type": "conj",
+                "title": "als — коли (в минулому)",
+                "explanation": "Вживається для одноразової події або періоду в минулому. Дієслово стоїть у кінці підрядного речення."
+              }
+            },
+            {
+              "word": "gesprochen",
+              "pos": "verb",
+              "frame_id": "frame_als_tel",
+              "context_role": "Partizip II у виразі am Telefon sprechen",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sprechen",
+                "praesens": "du spr[i]chst",
+                "praeteritum": "du sprachst",
+                "perfekt": "hat gesprochen",
+                "note": "У підрядному реченні передує допоміжному дієслову: ... am Telefon gesprochen haben."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "telefonieren",
+      "translation": "розмовляти телефоном",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "verb",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "telefonieren (mit + Dativ) · du telefonierst · telefonierte · hat telefoniert (без ge-!)",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Ich telefoniere jeden Abend mit meinen Schwiegereltern.",
+          "uk": "Я щовечора розмовляю телефоном зі своїми тестем і тещею.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["telefonieren mit + Dat", "die Schwiegereltern (19.10)"],
+          "complexity_notes": [
+            "Дієслово telefonieren — компактний синонім до am Telefon sprechen. Воно завжди керує прийменником mit + Dativ (розмовляти телефоном з кимось).",
+            "Поєднуємо зі словом die Schwiegereltern у Dativ множини: mit meinen Schwiegereltern."
+          ],
+          "tokens": [
+            {
+              "word": "telefoniere",
+              "pos": "verb",
+              "context_role": "Präsens · 1 ос. однини (ich telefoniere mit + Dativ)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "telefonieren",
+                "praesens": "du telefonierst",
+                "praeteritum": "du telefoniertest",
+                "perfekt": "hat telefoniert",
+                "note": "Усі дієслова на -ieren у Partizip II НЕ отримують префікса ge-: hat telefoniert!",
+                "constructions": [
+                  {
+                    "pattern": "mit jemandem (Dativ) telefonieren",
+                    "meaning": "розмовляти з кимось телефоном"
+                  }
+                ]
+              }
+            },
+            {
+              "word": "Schwiegereltern",
+              "pos": "noun_f",
+              "context_role": "Dativ · Множина (mit meinen Schwiegereltern)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Schwiegereltern",
+                "context_case": "Dativ · Множина"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Wir haben gestern eine ganze Stunde lang miteinander telefoniert.",
+          "uk": "Учора ми цілу годину розмовляли одне з одним телефоном.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Perfekt на -ieren (telefoniert)", "die Stunde (14.10)"],
+          "complexity_notes": [
+            "Важливе правило Perfekt: дієслова із суфіксом -ieren (telefonieren, passieren, probieren) утворюють Partizip II БЕЗ префікса ge-: haben ... telefoniert.",
+            "Повторюємо іменник зі списку 14.10: die Stunde (година)."
+          ],
+          "tokens": [
+            {
+              "word": "haben",
+              "pos": "verb",
+              "frame_id": "frame_perf_tel",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: haben ... telefoniert)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Stunde",
+              "pos": "noun_f",
+              "context_role": "Akkusativ часу · Однина (eine ganze Stunde lang — цілу годину, список 14.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Stunde",
+                "plural_nom": "die Stunden",
+                "context_case": "Akkusativ тривалості часу (eine Stunde)"
+              }
+            },
+            {
+              "word": "telefoniert",
+              "pos": "verb",
+              "frame_id": "frame_perf_tel",
+              "context_role": "Partizip II дієслова на -ieren (без ge-!) у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "telefonieren",
+                "praesens": "du telefonierst",
+                "praeteritum": "du telefoniertest",
+                "perfekt": "hat telefoniert",
+                "note": "Суфікс -ieren → Partizip II без ge- (telefoniert)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Es ist gefährlich und kostet eine hohe Strafe, wenn man beim Fahren ohne Headset telefoniert.",
+          "uk": "Це небезпечно і коштує високого штрафу, коли розмовляєш телефоном під час їзди без гарнітури.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Підрядне з wenn", "die Strafe (21.10)", "beim Fahren"],
+          "complexity_notes": [
+            "Поєднуємо в одному життєвому контексті: die Strafe (штраф, 21.10), fahren → das Fahren (їзда за кермом, 15.07) та telefonieren.",
+            "У підрядному реченні з wenn змінюване дієслово telefoniert стоїть у самому кінці."
+          ],
+          "tokens": [
+            {
+              "word": "Strafe",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (eine hohe Strafe)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Strafe",
+                "plural_nom": "die Strafen",
+                "context_case": "Akkusativ · Однина (eine hohe Strafe)"
+              }
+            },
+            {
+              "word": "wenn",
+              "pos": "conj",
+              "frame_id": "frame_wenn_tel",
+              "context_role": "Підрядний сполучник «коли / якщо» — дієслово telefoniert іде в кінець",
+              "popup": {
+                "type": "conj",
+                "title": "wenn — коли, якщо",
+                "explanation": "Переносить змінюване дієслово в кінець підрядного речення."
+              }
+            },
+            {
+              "word": "telefoniert",
+              "pos": "verb",
+              "frame_id": "frame_wenn_tel",
+              "context_role": "Präsens · 3 ос. однини (man telefoniert) у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "telefonieren",
+                "praesens": "du telefonierst",
+                "praeteritum": "du telefoniertest",
+                "perfekt": "hat telefoniert",
+                "note": "У Präsens 3-тя особа однини (er/man telefoniert) збігається за формою з Partizip II."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "günstig",
+      "translation": "дешевий, вигідний за ціною",
+      "category": "Словник · 19.10 – 21.10",
+      "pack_type": "word_list",
+      "part_of_speech": "adj",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "günstig (вигідний/недорогий, позитивний відтінок) vs billig (дешевий, іноді неякісний)",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Dieses gemütliche Hotel in der Stadt ist sehr günstig.",
+          "uk": "Цей затишний готель у місті дуже вигідний за ціною (недорогий).",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Прикметник після sein", "gemütlich / die Stadt (30.09)", "das Hotel (14.08)"],
+          "complexity_notes": [
+            "Різниця синонімів: billig (зі списку 27.07) часто означає «дешевий / низької якості», а günstig — «вигідний за співвідношенням ціни та якості, недорогий».",
+            "Речення повторює ваші слова: gemütlich і die Stadt (30.09) та das Hotel (14.08)."
+          ],
+          "tokens": [
+            {
+              "word": "Hotel",
+              "pos": "noun_n",
+              "context_role": "Nominativ · Однина (Dieses gemütliche Hotel) — підмет",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Hotel",
+                "plural_nom": "die Hotels",
+                "context_case": "Nominativ · Однина (das Hotel)"
+              }
+            },
+            {
+              "word": "Stadt",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (in der Stadt — у місті, список 30.09)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Stadt",
+                "plural_nom": "die Städte",
+                "context_case": "Dativ · Однина (in der Stadt)"
+              }
+            },
+            {
+              "word": "ist",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини від sein",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Після дієслова sein прикметник (günstig) не отримує закінчень."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Wir haben im Laden viele nützliche Sachen zu einem günstigen Preis gekauft.",
+          "uk": "Ми купили в магазині багато корисних речей за вигідною ціною.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["zu einem günstigen Preis (Dativ)", "der Laden / viele Sachen (05.10)", "der Preis (30.09)"],
+          "complexity_notes": [
+            "Коли прикметник günstig стоїть ПЕРЕД іменником у непрямому відмінку (тут Dativ після прийменника zu: zu einem ... Preis), він отримує закінчення -en: zu einem günstigen Preis.",
+            "Речення закріплює одразу три одиниці з вашого словника за 30.09 та 05.10: der Laden, viele Sachen, der Preis."
+          ],
+          "tokens": [
+            {
+              "word": "haben",
+              "pos": "verb",
+              "frame_id": "frame_perf_guenstig",
+              "context_role": "Допоміжне дієслово на 2-му місці (рамка: haben ... gekauft)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Laden",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (im Laden = in dem Laden — у магазині, список 05.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Laden",
+                "plural_nom": "die Läden",
+                "context_case": "Dativ · Однина (im Laden)"
+              }
+            },
+            {
+              "word": "Sachen",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Множина (viele nützliche Sachen — багато речей, список 05.10)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Sache",
+                "plural_nom": "die Sachen",
+                "context_case": "Akkusativ · Множина (viele Sachen)"
+              }
+            },
+            {
+              "word": "Preis",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (zu einem günstigen Preis — за вигідною ціною, список 30.09)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Preis",
+                "plural_nom": "die Preise",
+                "context_case": "Dativ · Однина (zu einem günstigen Preis)"
+              }
+            },
+            {
+              "word": "gekauft",
+              "pos": "verb",
+              "frame_id": "frame_perf_guenstig",
+              "context_role": "Partizip II від kaufen у кінці речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "kaufen",
+                "praesens": "du kaufst",
+                "praeteritum": "du kauftest",
+                "perfekt": "hat gekauft",
+                "note": "Замикає рамку Perfekt."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Obwohl die Tickets für das Flugzeug sehr günstig waren, sind wir lieber mit dem Zug in die Niederlande gefahren.",
+          "uk": "Хоча квитки на літак були дуже вигідними за ціною, ми воліли поїхати в Нідерланди потягом.",
+          "source": "Створено для навчання (i+1)",
+          "grammar_tags": ["Підрядне з obwohl", "das Flugzeug (12.08)", "der Zug (26.08)", "die Niederlande (19.10)"],
+          "complexity_notes": [
+            "Підрядне допустове речення з obwohl (хоча): дієслово waren стоїть перед комою, а головне речення починається з допоміжного дієслова sind (Perfekt руху: sind ... gefahren).",
+            "Поєднуємо ваші слова: das Flugzeug (літак, 12.08), der Zug (потяг, 26.08), die Niederlande (19.10) та günstig (21.10)."
+          ],
+          "tokens": [
+            {
+              "word": "Obwohl",
+              "pos": "conj",
+              "frame_id": "frame_obwohl_guenst",
+              "context_role": "Підрядний сполучник «хоча» — переносить дієслово waren у кінець перед комою",
+              "popup": {
+                "type": "conj",
+                "title": "obwohl — хоча",
+                "explanation": "Підрядний сполучник допусту."
+              }
+            },
+            {
+              "word": "Flugzeug",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Однина (für das Flugzeug — на літак, список 12.08 та 26.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Flugzeug",
+                "plural_nom": "die Flugzeuge",
+                "context_case": "Akkusativ · Однина (für das Flugzeug)"
+              }
+            },
+            {
+              "word": "waren",
+              "pos": "verb",
+              "frame_id": "frame_obwohl_guenst",
+              "context_role": "Präteritum · 3 ос. множини від sein у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Замикає підрядне речення з obwohl."
+              }
+            },
+            {
+              "word": "sind",
+              "pos": "verb",
+              "frame_id": "frame_perf_zug",
+              "context_role": "Допоміжне дієслово Perfekt одразу після коми (рамка: sind ... gefahren)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Дієслово руху fahren утворює Perfekt із sein."
+              }
+            },
+            {
+              "word": "Zug",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (mit dem Zug — потягом, список 26.08)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Zug",
+                "plural_nom": "die Züge",
+                "context_case": "Dativ · Однина (mit dem Zug)"
+              }
+            },
+            {
+              "word": "Niederlande",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Множина (in die Niederlande — куди? Wohin?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "— (тільки множина)",
+                "plural_nom": "die Niederlande",
+                "context_case": "Akkusativ · Множина (in die Niederlande)"
+              }
+            },
+            {
+              "word": "gefahren",
+              "pos": "verb",
+              "frame_id": "frame_perf_zug",
+              "context_role": "Partizip II від fahren у кінці головного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "fahren",
+                "praesens": "du f[ä]hrst",
+                "praeteritum": "du fuhrst",
+                "perfekt": "ist gefahren",
+                "note": "Чергування в Präsens: a → ä (du fährst, er fährt)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

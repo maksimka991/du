@@ -1,0 +1,1385 @@
+:root {
+  --bg-page: #f4f5f0;
+  --bg-card: #ffffff;
+  --bg-card-header: #e6ece2;
+  --border-card: #d9e0d5;
+  --border-divider: #ecefe9;
+
+  --text-main: #1d2621;
+  --text-secondary: #5d6a62;
+  --text-muted: #849188;
+
+  /* Кольори пунктирного підкреслення за родом та частиною мови */
+  --underline-noun-m: #9b6b43;
+  --underline-noun-f: #b95869;
+  --underline-noun-n: #4d8864;
+  --underline-verb: #3c6e8f;
+  --underline-conj: #b8862d;
+
+  /* Кольори активного токена та темно-смарагдового попапу */
+  --token-hover-bg: #e2ece6;
+  --token-hover-border: #7ea38e;
+  --frame-highlight-bg: #fff4d6;
+  --frame-highlight-border: #e0a82e;
+
+  --popup-bg: #17332b;
+  --popup-bg-deep: #122922;
+  --popup-border: #284f43;
+  --popup-text: #eef5f2;
+  --popup-muted: #9ab5ac;
+  --vowel-mark-bg: #e2c044;
+  --vowel-mark-text: #14261f;
+
+  --accent: #225444;
+  --accent-hover: #193f33;
+  --accent-soft: #dce8e2;
+  --play-btn-bg: #e2c044;
+  --play-btn-text: #14261f;
+}
+
+/* ==========================================================================
+   ТЕМА 2: «ДРУЖЕЛЮБНИЙ ФОКУС» (Warm Latte / Cozy & Friendly Single-Card Focus)
+   ========================================================================== */
+body[data-ui-theme="v2"] {
+  --bg-page: #faf6f0;
+  --bg-card: #ffffff;
+  --bg-card-header: #f4eadc;
+  --border-card: #e6dac8;
+  --border-divider: #f0e8dc;
+
+  --text-main: #2b231d;
+  --text-secondary: #6e5f53;
+  --text-muted: #9c8c7e;
+
+  --token-hover-bg: #fff0db;
+  --token-hover-border: #d99b52;
+
+  --popup-bg: #2c221e;
+  --popup-bg-deep: #211916;
+  --popup-border: #4a3a33;
+  --popup-text: #fdf8f4;
+  --popup-muted: #c2b0a3;
+
+  --accent: #c86428;
+  --accent-hover: #a84f1b;
+  --accent-soft: #fae6d5;
+  --play-btn-bg: #f08c4b;
+  --play-btn-text: #ffffff;
+}
+
+/* ==========================================================================
+   ТЕМА 3: «ТРИ СХОДИНКИ» (Nordic Sky / Horizontal 3-Column Bento)
+   ========================================================================== */
+body[data-ui-theme="v3"] {
+  --bg-page: #eef3f9;
+  --bg-card: #ffffff;
+  --bg-card-header: #e1ebf7;
+  --border-card: #cfddf0;
+  --border-divider: #e4edf7;
+
+  --text-main: #132238;
+  --text-secondary: #4c617d;
+  --text-muted: #7c90ab;
+
+  --token-hover-bg: #e0edff;
+  --token-hover-border: #5b8def;
+
+  --popup-bg: #16243b;
+  --popup-bg-deep: #0f1a2c;
+  --popup-border: #2a4166;
+  --popup-text: #f0f5fc;
+  --popup-muted: #98aecb;
+
+  --accent: #2b50aa;
+  --accent-hover: #1e3b82;
+  --accent-soft: #dce7fc;
+  --play-btn-bg: #38d399;
+  --play-btn-text: #0e2920;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  padding-bottom: 130px;
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+/* Верхня навігація */
+.topbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-card);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 11px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-badge {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease;
+}
+
+.brand-title {
+  font-size: 17.5px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Перемикач 3 інтерфейсів */
+.ui-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-page);
+  border: 1px solid var(--border-card);
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.ui-switcher-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 0 8px 0 6px;
+}
+
+.ui-switch-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 9px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.ui-switch-btn:hover {
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.ui-switch-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Вкладки режимів */
+.main-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  border: 1px solid var(--border-card);
+  background: #ffffff;
+  color: var(--text-secondary);
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tab-btn:hover {
+  background: var(--bg-card-header);
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background: var(--popup-bg);
+  color: #ffffff;
+  border-color: var(--popup-bg);
+}
+
+.tab-btn-accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: transparent;
+}
+
+.tab-count {
+  background: rgba(255, 255, 255, 0.22);
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 11.5px;
+}
+
+/* Панель фільтрів */
+.controls-bar {
+  background: var(--bg-card-header);
+  border-bottom: 1px solid var(--border-card);
+  transition: background 0.25s ease;
+}
+
+.controls-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 9px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.filter-group,
+.search-group,
+.view-toggles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.control-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.control-select,
+.control-input {
+  border: 1px solid var(--border-card);
+  background: #ffffff;
+  padding: 7px 12px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  color: var(--text-main);
+  outline: none;
+}
+
+.control-input {
+  min-width: 240px;
+}
+
+.toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Основний контейнер */
+.main-container {
+  max-width: 1360px;
+  margin: 22px auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   МАКЕТ 1 («Класична сітка» — v1): 2 колонки, без бокового списку
+   ========================================================================== */
+body[data-ui-theme="v1"] .focus-sidebar,
+body[data-ui-theme="v1"] .focus-nav-bar {
+  display: none;
+}
+
+body[data-ui-theme="v1"] .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   МАКЕТ 2 («Дружелюбний фокус» — v2): Боковий список слів + 1 велика картка
+   ========================================================================== */
+body[data-ui-theme="v2"] .study-layout {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  body[data-ui-theme="v2"] .study-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.focus-sidebar {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 16px;
+  position: sticky;
+  top: 76px;
+  box-shadow: 0 6px 20px rgba(60, 40, 20, 0.04);
+}
+
+.focus-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px 12px;
+  border-bottom: 1px solid var(--border-divider);
+  margin-bottom: 10px;
+}
+
+.sidebar-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.sidebar-counter {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+.focus-word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+}
+
+.focus-word-item {
+  border: 1.5px solid transparent;
+  background: #faf6f0;
+  border-radius: 13px;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.focus-word-item:hover {
+  background: #f3eadc;
+}
+
+.focus-word-item.active {
+  background: #fff5ea;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(200, 100, 40, 0.1);
+}
+
+.focus-word-item-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.focus-word-de {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.focus-word-uk {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.focus-word-type-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Навігаційна панель над Фокус-карткою у v2 */
+.focus-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 14px rgba(60, 40, 20, 0.03);
+}
+
+.focus-nav-btn {
+  border: 1px solid var(--border-card);
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.focus-nav-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.focus-progress-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.focus-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #dfd3c3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.focus-dot.active {
+  width: 26px;
+  background: var(--accent);
+}
+
+body[data-ui-theme="v2"] .cards-grid {
+  display: block;
+}
+
+body[data-ui-theme="v2"] .word-card {
+  border-radius: 24px;
+  box-shadow: 0 10px 32px rgba(60, 40, 20, 0.06);
+  background: #fffcf8;
+}
+
+body[data-ui-theme="v2"] .word-card.hidden-in-focus {
+  display: none;
+}
+
+body[data-ui-theme="v2"] .word-card-header {
+  padding: 26px 32px 22px;
+  background: linear-gradient(135deg, #f6ecdf 0%, #faefe2 100%);
+}
+
+body[data-ui-theme="v2"] .card-headword-title {
+  font-size: 31px;
+}
+
+/* У v2 кожне речення — це окрема дружня "картка-бульбашка" з відступами і кольоровим лівим маркером */
+body[data-ui-theme="v2"] .card-sentences-list {
+  padding: 22px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #faf6f0;
+}
+
+body[data-ui-theme="v2"] .sentence-block {
+  background: #ffffff;
+  border: 1px solid #eadfce;
+  border-radius: 18px;
+  padding: 20px 24px;
+  border-left: 6px solid #76b88c;
+  box-shadow: 0 3px 10px rgba(60, 40, 20, 0.03);
+}
+
+body[data-ui-theme="v2"] .sentence-block[data-level="середнє"] {
+  border-left-color: #e6a23c;
+}
+
+body[data-ui-theme="v2"] .sentence-block[data-level="складніше"] {
+  border-left-color: #c96480;
+}
+
+body[data-ui-theme="v2"] .sentence-de {
+  font-size: 23px;
+}
+
+/* ==========================================================================
+   МАКЕТ 3 («Три сходинки» — v3): Горизонтальна розкладка 3 речень зліва направо
+   ========================================================================== */
+body[data-ui-theme="v3"] .focus-sidebar,
+body[data-ui-theme="v3"] .focus-nav-bar {
+  display: none;
+}
+
+body[data-ui-theme="v3"] .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+body[data-ui-theme="v3"] .word-card {
+  border-radius: 20px;
+  box-shadow: 0 6px 22px rgba(19, 34, 56, 0.06);
+}
+
+body[data-ui-theme="v3"] .word-card-header {
+  padding: 16px 24px;
+  background: linear-gradient(90deg, #e1ebf7 0%, #edf3fb 100%);
+  align-items: center;
+}
+
+body[data-ui-theme="v3"] .card-sentences-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f7faff;
+}
+
+@media (max-width: 1024px) {
+  body[data-ui-theme="v3"] .card-sentences-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+body[data-ui-theme="v3"] .sentence-block {
+  border-bottom: none;
+  border-right: 1px solid var(--border-divider);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+body[data-ui-theme="v3"] .sentence-block:last-child {
+  border-right: none;
+}
+
+body[data-ui-theme="v3"] .sentence-de {
+  font-size: 19px;
+}
+
+body[data-ui-theme="v3"] .level-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* У Варіанті 3 плеєр знизу перетворюється на компактну плаваючу капсулу по центру */
+body[data-ui-theme="v3"] .audio-dock {
+  left: 50%;
+  right: auto;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100vw - 32px));
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(15, 26, 44, 0.35);
+}
+
+/* ==========================================================================
+   СПІЛЬНІ СТИЛІ КАРТОК І РЕЧЕНЬ
+   ========================================================================== */
+.word-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(24, 42, 32, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.word-card-header {
+  background: var(--bg-card-header);
+  padding: 20px 26px 18px;
+  border-bottom: 1px solid var(--border-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card-category-crumb {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pack-type-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.card-headword-title {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.card-forms-summary {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border-radius: 10px;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon-btn:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Блок окремого речення в картці */
+.sentence-block {
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--border-divider);
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.sentence-block:last-child {
+  border-bottom: none;
+}
+
+.sentence-block.playing-active {
+  background-color: var(--accent-soft) !important;
+}
+
+.sentence-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.sentence-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.level-pill {
+  display: inline-block;
+  background: #eaeee8;
+  color: #4e5b52;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 2px 11px;
+  border-radius: 999px;
+}
+
+.grammar-tag-pill {
+  display: inline-block;
+  background: var(--bg-page);
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  padding: 1px 8px;
+  border-radius: 6px;
+}
+
+.hide-grammar-tags .grammar-tag-pill {
+  display: none;
+}
+
+.sentence-audio-btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.audio-chip {
+  border: 1px solid var(--border-card);
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.audio-chip:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Німецьке речення та інтерактивні токени */
+.sentence-de {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.word-token {
+  position: relative;
+  display: inline-block;
+  padding: 1px 4px;
+  margin: 0 -2px;
+  border-radius: 6px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.word-token::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: 1px;
+  border-bottom-width: 2.5px;
+  border-bottom-style: dotted;
+}
+
+.word-token.pos-noun_m::after {
+  border-bottom-color: var(--underline-noun-m);
+}
+.word-token.pos-noun_f::after {
+  border-bottom-color: var(--underline-noun-f);
+}
+.word-token.pos-noun_n::after {
+  border-bottom-color: var(--underline-noun-n);
+}
+.word-token.pos-verb::after {
+  border-bottom-color: var(--underline-verb);
+}
+.word-token.pos-conj::after {
+  border-bottom-color: var(--underline-conj);
+}
+
+.word-token:hover,
+.word-token.active-token {
+  background-color: var(--token-hover-bg);
+  border-color: var(--token-hover-border);
+}
+
+.word-token.frame-partner-active {
+  background-color: var(--frame-highlight-bg);
+  border-color: var(--frame-highlight-border);
+}
+
+.word-token.frame-partner-active::before {
+  content: "🔗 рамка";
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #b87d14;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sentence-uk {
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  margin-bottom: 11px;
+}
+
+/* Розгортка «► Чому така складність і що помітити» */
+.complexity-details {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.complexity-summary {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  padding: 3px 0;
+}
+
+.complexity-summary::-webkit-details-marker {
+  display: none;
+}
+
+.complexity-arrow {
+  display: inline-block;
+  font-size: 11px;
+  transition: transform 0.18s ease;
+}
+
+details[open] .complexity-arrow {
+  transform: rotate(90deg);
+}
+
+.complexity-body {
+  margin-top: 8px;
+  background: var(--bg-page);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 12px 15px;
+  font-size: 13.5px;
+  color: var(--text-main);
+}
+
+.complexity-list {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sentence-source {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Попап граматичного розбору слова */
+.word-popup {
+  position: fixed;
+  z-index: 200;
+  width: 345px;
+  max-width: calc(100vw - 24px);
+  background: var(--popup-bg);
+  color: var(--popup-text);
+  border: 1px solid var(--popup-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 16px 38px rgba(8, 22, 17, 0.38);
+  font-size: 13.5px;
+  line-height: 1.45;
+  pointer-events: auto;
+}
+
+.word-popup.hidden {
+  display: none;
+}
+
+.popup-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.popup-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.popup-label {
+  color: var(--popup-muted);
+  font-size: 12.5px;
+}
+
+.popup-val {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+}
+
+.vowel-shift {
+  background: var(--vowel-mark-bg);
+  color: var(--vowel-mark-text);
+  font-weight: 800;
+  padding: 0 3px;
+  border-radius: 3px;
+  margin: 0 0.5px;
+}
+
+.popup-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 10px 0;
+}
+
+.popup-note {
+  font-size: 12.5px;
+  color: #d6e5df;
+}
+
+.popup-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.popup-constructions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.popup-constructions li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.popup-constructions li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #82b3a1;
+  font-weight: bold;
+}
+
+.constr-pattern {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.constr-meaning {
+  color: var(--popup-muted);
+  font-size: 12.5px;
+}
+
+.popup-context-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: #e2efea;
+  margin-top: 8px;
+}
+
+.popup-footer-bar {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-speak-btn {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-speak-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Вкладка AI Конструктора та Імпорту */
+.builder-view.hidden {
+  display: none;
+}
+
+.builder-header-card {
+  background: var(--bg-card-header);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 22px;
+}
+
+.builder-header-card h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.builder-header-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.builder-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 960px) {
+  .builder-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.builder-panel {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-step-badge {
+  align-self: flex-start;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.panel-hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radio-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.radio-card {
+  border: 1.5px solid var(--border-card);
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--bg-page);
+}
+
+.radio-card.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.radio-card span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.control-textarea {
+  width: 100%;
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.code-textarea {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12.5px;
+  background: var(--bg-page);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--text-main);
+  border: 1px solid var(--border-card);
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-sm {
+  padding: 5px 11px;
+  font-size: 12.5px;
+}
+
+.status-box {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  background: #e9f5ee;
+  border: 1px solid #9ecbb0;
+  color: #16442c;
+}
+
+.status-box.error {
+  background: #fdf0f0;
+  border-color: #e6a8a8;
+  color: #7a1c1c;
+}
+
+/* Нижній док: Фоновий Аудіо-Плеєр */
+.audio-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--popup-bg);
+  color: #ffffff;
+  border-top: 1px solid var(--popup-border);
+  box-shadow: 0 -8px 28px rgba(10, 25, 20, 0.25);
+  z-index: 120;
+  transition: all 0.25s ease;
+}
+
+.audio-dock-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.player-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.player-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.player-btn-main {
+  width: 46px;
+  height: 46px;
+  background: var(--play-btn-bg);
+  color: var(--play-btn-text);
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.player-now-playing {
+  flex: 1;
+  min-width: 240px;
+}
+
+.now-playing-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.phase-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffe27a;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.now-playing-card-tag {
+  font-size: 12px;
+  color: var(--popup-muted);
+}
+
+.now-playing-de {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.now-playing-uk {
+  font-size: 13px;
+  color: var(--popup-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-settings {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.player-setting-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--popup-muted);
+}
+
+.dock-select {
+  background: var(--popup-bg-deep);
+  color: #ffffff;
+  border: 1px solid var(--popup-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.dock-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: #dcebe5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hidden {
+  display: none !important;
+}

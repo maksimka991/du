@@ -1,0 +1,1007 @@
+{
+  "pack_title": "Стартовий курс: Словник + Граматичні підтеми",
+  "category": "Іменники · Ключі, дім",
+  "pack_type": "word_list",
+  "description": "Повний демонстраційний набір: картки за списком слів (der Schlüssel, die Tür) та граматичні підтеми (Сильні/модальні дієслова і Дієслова з керуванням відмінками).",
+  "cards": [
+    {
+      "headword": "der Schlüssel",
+      "translation": "ключ",
+      "category": "Іменники · Ключі, дім",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "m",
+      "plural": "die Schlüssel",
+      "forms_summary": "der Schlüssel (Nom) · den Schlüssel (Akk) · dem Schlüssel (Dat) · pl: die Schlüssel",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Wo ist mein Schlüssel?",
+          "uk": "Де мій ключ?",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Nominativ", "W-Frage", "Однина"],
+          "complexity_notes": [
+            "Питальне речення з питальним словом Wo (де?): дієслово-зв'язка ist обов'язково стоїть на 2-му місці.",
+            "Іменник der Schlüssel тут є підметом (Nominativ, чоловічий рід), тому присвійний займенник mein не має закінчення.",
+            "Зверни увагу: в однині та множині (die Schlüssel) основа слова не змінюється — число показує лише артикль."
+          ],
+          "tokens": [
+            {
+              "word": "ist",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (er/sie/es ist) — дієслово-зв'язка на 2-й позиції",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "У Perfekt іншого дієслова sein може бути допоміжним: bin aufgestanden."
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (mein Schlüssel) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Nominativ · Однина (mein Schlüssel)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Ich habe meinen Schlüssel zu Hause vergessen.",
+          "uk": "Я забув свій ключ удома.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Akkusativ", "Perfekt", "Satzklammer"],
+          "complexity_notes": [
+            "Рамкова конструкція (Satzklammer) у минулому часі Perfekt: допоміжне дієслово habe стоїть на 2-му місці, а дієприкметник vergessen замикає речення в самому кінці.",
+            "Зміна форми слова: дієслово vergessen вимагає прямого додатка в Akkusativ (кого/що?). У чоловічому роді der змінюється на den, тому mein → meinen Schlüssel.",
+            "Сталий вираз місця: zu Hause означає «вдома» (де?), тоді як nach Hause — «додому» (куди?)."
+          ],
+          "tokens": [
+            {
+              "word": "habe",
+              "pos": "verb",
+              "frame_id": "frame_perfekt",
+              "context_role": "Допоміжне дієслово (1-ша частина рамки Perfekt: habe ... vergessen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "Утворює Perfekt для більшості перехідних дієслів (habe ... vergessen)."
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (meinen Schlüssel) — прямий додаток після vergessen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Akkusativ · Однина (meinen Schlüssel)"
+              }
+            },
+            {
+              "word": "Hause",
+              "pos": "noun_n",
+              "context_role": "Dativ · Сталий вираз zu Hause (вдома, із залишковим давнім закінченням -e)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Haus",
+                "plural_nom": "die Häuser",
+                "context_case": "Dativ у виразі zu Hause (вдома)"
+              }
+            },
+            {
+              "word": "vergessen",
+              "pos": "verb",
+              "frame_id": "frame_perfekt",
+              "context_role": "Partizip II у кінці речення (2-га частина рамки Perfekt: habe ... vergessen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "vergessen",
+                "praesens": "du verg[i]sst",
+                "praeteritum": "du vergaßest",
+                "perfekt": "hat vergessen",
+                "note": "Сильне дієслово з невідокремлюваним префіксом ver-: Partizip II без ge- (vergessen), у Präsens e → i.",
+                "constructions": [
+                  {
+                    "pattern": "etwas (Akkusativ) vergessen",
+                    "meaning": "забути щось"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Kannst du mir deinen Schlüssel geben, damit ich die Tür öffnen kann?",
+          "uk": "Можеш дати мені свій ключ, щоб я міг відчинити двері?",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Dativ + Akkusativ", "Модальна рамка", "Підрядне з damit"],
+          "complexity_notes": [
+            "Дві синтаксичні рамки в одному реченні: 1) у головному питанні модальне дієслово Kannst на 1-му місці, а інфінітив geben — у кінці перед комою; 2) після сполучника мети damit змінюване дієслово kann переміщується в самий кінець підрядного речення.",
+            "Подвійне керування дієслова geben (jemandem etwas geben): кому? — mir (Dativ), що? — deinen Schlüssel (Akkusativ чол. роду).",
+            "У підрядному реченні die Tür стоїть в Akkusativ (відчинити що?), але для жіночого роду форма артикля die не відрізняється від Nominativ."
+          ],
+          "tokens": [
+            {
+              "word": "Kannst",
+              "pos": "verb",
+              "frame_id": "frame_modal_main",
+              "context_role": "Модальне дієслово на 1-му місці у питанні (рамка: Kannst ... geben)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "З іншим інфінітивом у Perfekt: hat helfen können (замість gekonnt)."
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (deinen Schlüssel) — прямий додаток від geben",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Akkusativ · Однина (deinen Schlüssel)"
+              }
+            },
+            {
+              "word": "geben",
+              "pos": "verb",
+              "frame_id": "frame_modal_main",
+              "context_role": "Інфінітив у кінці головного речення (залежить від Kannst)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "Чергування в Präsens: e → i. Підсвічено змінену голосну.",
+                "constructions": [
+                  {
+                    "pattern": "jemandem etwas geben · Dativ + Akkusativ",
+                    "meaning": "дати комусь щось"
+                  },
+                  {
+                    "pattern": "es gibt + Akkusativ",
+                    "meaning": "є / існує"
+                  },
+                  {
+                    "pattern": "jemandem Bescheid geben · Dativ",
+                    "meaning": "дати комусь знати"
+                  }
+                ],
+                "footer_summary": "jemandem etwas geben: кому — Dativ, що — Akkusativ. es gibt + Akkusativ."
+              }
+            },
+            {
+              "word": "damit",
+              "pos": "conj",
+              "frame_id": "frame_sub_damit",
+              "context_role": "Підрядний сполучник мети («щоб») — відправляє дієслово kann у кінець речення",
+              "popup": {
+                "type": "conj",
+                "title": "damit — щоб (для того щоб)",
+                "explanation": "Вводить підрядне речення мети, коли підмети в обох частинах різні (ти даєш ключ → щоб я відчинив). Змінюване дієслово йде в самий кінець."
+              }
+            },
+            {
+              "word": "Tür",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Однина (die Tür) — прямий додаток від öffnen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Tür",
+                "plural_nom": "die Türen",
+                "context_case": "Akkusativ · Однина (die Tür)"
+              }
+            },
+            {
+              "word": "öffnen",
+              "pos": "verb",
+              "frame_id": "frame_sub_damit",
+              "context_role": "Інфінітив перед модальним дієсловом у кінці підрядного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "öffnen",
+                "praesens": "du öffnest",
+                "praeteritum": "du öffnetest",
+                "perfekt": "hat geöffnet",
+                "note": "Через приголосні -ffn- додається сполучна голосна -e- перед закінченням (du öffnest, er öffnet)."
+              }
+            },
+            {
+              "word": "kann",
+              "pos": "verb",
+              "frame_id": "frame_sub_damit",
+              "context_role": "Präsens · 1 ос. однини (ich kann) — у самому кінці після сполучника damit",
+              "popup": {
+                "type": "verb",
+                "infinitive": "können",
+                "praesens": "du kannst",
+                "praeteritum": "du konntest",
+                "perfekt": "hat gekonnt",
+                "note": "З іншим інфінітивом у Perfekt: hat helfen können (замість gekonnt)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "die Tür",
+      "translation": "двері",
+      "category": "Іменники · Ключі, дім",
+      "pack_type": "word_list",
+      "part_of_speech": "noun",
+      "gender": "f",
+      "plural": "die Türen",
+      "forms_summary": "die Tür (Nom/Akk) · der Tür (Dat) · pl: die Türen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Die Tür ist jetzt offen.",
+          "uk": "Двері зараз відчинені.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Nominativ", "Однина в німецькій"],
+          "complexity_notes": [
+            "На відміну від української (де «двері» завжди у множині), у німецькій одні двері — це однина жіночого роду: die Tür + дієслово в однині ist.",
+            "Слово offen — це прикметник «відчинений» (стан), тоді як öffnen — дієслово «відчиняти» (дія)."
+          ],
+          "tokens": [
+            {
+              "word": "Tür",
+              "pos": "noun_f",
+              "context_role": "Nominativ · Однина (Die Tür) — підмет речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Tür",
+                "plural_nom": "die Türen",
+                "context_case": "Nominativ · Однина (die Tür)"
+              }
+            },
+            {
+              "word": "ist",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (sie ist) — узгоджується з одниною die Tür",
+              "popup": {
+                "type": "verb",
+                "infinitive": "sein",
+                "praesens": "du bist",
+                "praeteritum": "du warst",
+                "perfekt": "ist gewesen",
+                "note": "Разом із прикметником offen описує стан (Zustand)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Der Schlüssel steckt noch in der Tür.",
+          "uk": "Ключ ще стирчить у дверях.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Dativ (Wo?)", "Жіночий рід die → der"],
+          "complexity_notes": [
+            "Прийменник in на питання Wo? (де?) вимагає відмінка Dativ.",
+            "У Dativ однини артикль жіночого роду die змінюється на der: die Tür → in der Tür (не плутай із der у чоловічому роді Nominativ!).",
+            "Це речення повторює слово der Schlüssel з нашого списку у ролі підмета."
+          ],
+          "tokens": [
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (Der Schlüssel) — підмет",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Nominativ · Однина"
+              }
+            },
+            {
+              "word": "steckt",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (er steckt) — перебуває всередині (Wo? + Dativ)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "stecken",
+                "praesens": "du steckst",
+                "praeteritum": "du stecktest",
+                "perfekt": "hat gesteckt",
+                "note": "Може означати і «стирчати/знаходитися» (Wo? + Dativ), і «встромляти/класти» (Wohin? + Akkusativ)."
+              }
+            },
+            {
+              "word": "Tür",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (in der Tür) — відповідь на питання Wo? (де?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Tür",
+                "plural_nom": "die Türen",
+                "context_case": "Dativ · Однина (die → der Tür)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Bitte schließ alle Türen ab, bevor wir das Haus verlassen.",
+          "uk": "Будь ласка, замкни всі двері на ключ, перш ніж ми покинемо дім.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Множина (die Türen)", "Відокремлюваний префікс", "Підрядне з bevor"],
+          "complexity_notes": [
+            "Форма множини у Akkusativ: die Tür → alle Türen (додається суфікс -en).",
+            "Рамка відокремлюваного префікса в наказовому способі (Imperativ): дієслово abschließen (замикати на ключ) розпадається на schließ ... ab.",
+            "Сполучник часу bevor (перш ніж) утворює підрядне речення і переносить дієслово verlassen у самий кінець."
+          ],
+          "tokens": [
+            {
+              "word": "schließ",
+              "pos": "verb",
+              "frame_id": "frame_trennbar",
+              "context_role": "Imperativ (наказовий спосіб до «ти») від abschließen (рамка: schließ ... ab)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "abschließen",
+                "praesens": "du schließt ab",
+                "praeteritum": "du schlossest ab",
+                "perfekt": "hat abgeschlossen",
+                "note": "Відокремлюваний префікс ab- іде в кінець головного речення. Означає саме «замикати на ключ» (на відміну від просто schließen — зачиняти)."
+              }
+            },
+            {
+              "word": "Türen",
+              "pos": "noun_f",
+              "context_role": "Akkusativ · Множина (alle Türen) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Tür",
+                "plural_nom": "die Türen",
+                "context_case": "Akkusativ · Множина (alle Türen)"
+              }
+            },
+            {
+              "word": "ab",
+              "pos": "verb",
+              "frame_id": "frame_trennbar",
+              "context_role": "Відокремлюваний префікс дієслова abschließen у кінці головного речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "abschließen",
+                "praesens": "du schließt ab",
+                "praeteritum": "du schlossest ab",
+                "perfekt": "hat abgeschlossen",
+                "note": "Друга частина рамки schließ ... ab."
+              }
+            },
+            {
+              "word": "bevor",
+              "pos": "conj",
+              "frame_id": "frame_sub_bevor",
+              "context_role": "Підрядний сполучник часу («перш ніж») — дієслово verlassen іде в кінець",
+              "popup": {
+                "type": "conj",
+                "title": "bevor — перш ніж, до того як",
+                "explanation": "Підрядний сполучник, після якого змінюване дієслово займає останню позицію в реченні."
+              }
+            },
+            {
+              "word": "Haus",
+              "pos": "noun_n",
+              "context_role": "Akkusativ · Однина (das Haus) — прямий додаток від verlassen",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Haus",
+                "plural_nom": "die Häuser",
+                "context_case": "Akkusativ · Однина (das Haus)"
+              }
+            },
+            {
+              "word": "verlassen",
+              "pos": "verb",
+              "frame_id": "frame_sub_bevor",
+              "context_role": "Präsens · 1 ос. множини (wir verlassen) — у кінці підрядного речення після bevor",
+              "popup": {
+                "type": "verb",
+                "infinitive": "verlassen",
+                "praesens": "du verl[ä]sst",
+                "praeteritum": "du verließest",
+                "perfekt": "hat verlassen",
+                "note": "Чергування в Präsens: a → ä (du verlässt, er verlässt). Partizip II без ge-."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "geben",
+      "translation": "давати",
+      "category": "Сильні та модальні дієслова · Чергування e → i",
+      "pack_type": "grammar_topic",
+      "part_of_speech": "verb",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "geben · du gibst / er gibt · gab · hat gegeben",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Warum gibst du mir keinen Schlüssel?",
+          "uk": "Чому ти не даєш мені ключа?",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Präsens e → i", "Dativ + Akkusativ", "Заперечення kein"],
+          "complexity_notes": [
+            "Фокус підтеми — зміна кореневої голосної e → i у 2-й та 3-й особі однини Präsens: ich gebe, але du gibst, er/sie/es gibt.",
+            "Класична модель керування geben: кому? — mir (Dativ), що? — keinen Schlüssel (Akkusativ чоловічого роду).",
+            "Іменник з неозначеним артиклем заперечується через kein (у чол. роді Akkusativ: keinen)."
+          ],
+          "tokens": [
+            {
+              "word": "gibst",
+              "pos": "verb",
+              "context_role": "Präsens · 2 ос. однини (du gibst) зі зміною кореневої голосної e → i",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "Чергування в Präsens: e → i. Підсвічено змінену голосну.",
+                "constructions": [
+                  {
+                    "pattern": "jemandem etwas geben · Dativ + Akkusativ",
+                    "meaning": "дати комусь щось"
+                  },
+                  {
+                    "pattern": "es gibt + Akkusativ",
+                    "meaning": "є / існує"
+                  },
+                  {
+                    "pattern": "jemandem Bescheid geben · Dativ",
+                    "meaning": "дати комусь знати"
+                  }
+                ],
+                "footer_summary": "jemandem etwas geben: кому — Dativ, що — Akkusativ."
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (keinen Schlüssel) — прямий додаток",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Akkusativ · Однина (keinen Schlüssel)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "In diesem Haus gibt es leider keinen Aufzug.",
+          "uk": "У цьому будинку, на жаль, немає ліфта.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["es gibt + Akkusativ", "Inversion"],
+          "complexity_notes": [
+            "Безособова конструкція es gibt (є / існує) ЗАВЖДИ вимагає після себе відмінка Akkusativ! Тому der Aufzug (ліфт) отримує форму keinen Aufzug.",
+            "Зворотний порядок слів (Inversion): на 1-му місці стоїть обставина місця In diesem Haus (Dativ), тому дієслово gibt залишається на 2-му місці, а підмет es іде одразу після нього (gibt es)."
+          ],
+          "tokens": [
+            {
+              "word": "Haus",
+              "pos": "noun_n",
+              "context_role": "Dativ · Однина (In diesem Haus) — де? (Wo?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Haus",
+                "plural_nom": "die Häuser",
+                "context_case": "Dativ · Однина (diesem Haus)"
+              }
+            },
+            {
+              "word": "gibt",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (es gibt) — конструкція «є / існує» (+ Akkusativ)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "У 3-й особі однини (er/sie/es gibt) також відбувається чергування e → i.",
+                "constructions": [
+                  {
+                    "pattern": "es gibt + Akkusativ",
+                    "meaning": "є / існує (завжди з Akkusativ!)"
+                  }
+                ]
+              }
+            },
+            {
+              "word": "Aufzug",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (keinen Aufzug) — прямий додаток після es gibt",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Aufzug",
+                "plural_nom": "die Aufzüge",
+                "context_case": "Akkusativ · Однина (keinen Aufzug)"
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Er hat mir gestern Bescheid gegeben, dass er den Schlüssel gefunden hat.",
+          "uk": "Він учора дав мені знати, що знайшов ключ.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Perfekt", "Bescheid geben + Dat", "Підрядне з dass"],
+          "complexity_notes": [
+            "Сталий вираз jemandem (Dativ) Bescheid geben — повідомити когось / дати комусь знати. У Perfekt утворює рамку hat ... Bescheid gegeben.",
+            "Підрядне з'ясувальне речення зі сполучником dass (що): допоміжне дієслово hat у підрядній частині виноситься в самий кінець після Partizip II (gefunden hat)."
+          ],
+          "tokens": [
+            {
+              "word": "hat",
+              "pos": "verb",
+              "frame_id": "frame_perfekt_main",
+              "context_role": "Допоміжне дієслово в головному реченні (рамка: hat ... gegeben)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "gegeben",
+              "pos": "verb",
+              "frame_id": "frame_perfekt_main",
+              "context_role": "Partizip II сильного дієслова geben (закриває головне речення)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "Сильні дієслова в Partizip II мають суфікс -en (gegeben).",
+                "constructions": [
+                  {
+                    "pattern": "jemandem Bescheid geben · Dativ",
+                    "meaning": "дати комусь знати / повідомити"
+                  }
+                ]
+              }
+            },
+            {
+              "word": "dass",
+              "pos": "conj",
+              "frame_id": "frame_sub_dass",
+              "context_role": "Підрядний сполучник «що» — відправляє змінюване дієслово hat у кінець",
+              "popup": {
+                "type": "conj",
+                "title": "dass — що (сполучник)",
+                "explanation": "Пишеться з подвійним -ss після коми і завжди переносить змінюване дієслово (тут: hat) у кінець підрядного речення."
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (den Schlüssel) — прямий додаток від finden",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Akkusativ · Однина (den Schlüssel)"
+              }
+            },
+            {
+              "word": "gefunden",
+              "pos": "verb",
+              "frame_id": "frame_sub_dass",
+              "context_role": "Partizip II від сильного дієслова finden (знаходити)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "finden",
+                "praesens": "du findest",
+                "praeteritum": "du fandest",
+                "perfekt": "hat gefunden",
+                "note": "Чергування основ сильного дієслова: i – a – u (finden – fand – gefunden)."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "helfen",
+      "translation": "допомагати (+ Dativ)",
+      "category": "Дієслова з керуванням · + Dativ",
+      "pack_type": "grammar_topic",
+      "part_of_speech": "verb",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "helfen (+ Dativ) · du hilfst / er hilft · half · hat geholfen",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Hilfst du mir bitte kurz?",
+          "uk": "Допоможеш мені, будь ласка, на хвилинку?",
+          "source": "Створено для навчання",
+          "grammar_tags": ["+ Dativ", "Präsens e → i"],
+          "complexity_notes": [
+            "Дієслово helfen ЗАВЖДИ керує давальним відмінком Dativ (допомагати кому? — ich → mir, du → dir).",
+            "Як і geben, сильне дієслово helfen у 2-й та 3-й особі однини Präsens змінює кореневу голосну e → i: du hilfst, er hilft."
+          ],
+          "tokens": [
+            {
+              "word": "Hilfst",
+              "pos": "verb",
+              "context_role": "Präsens · 2 ос. однини (du hilfst) — зміна голосної e → i + керування Dativ",
+              "popup": {
+                "type": "verb",
+                "infinitive": "helfen",
+                "praesens": "du h[i]lfst",
+                "praeteritum": "du halfst",
+                "perfekt": "hat geholfen",
+                "note": "Чергування в Präsens: e → i (du hilfst, er hilft). Вимагає Dativ!",
+                "constructions": [
+                  {
+                    "pattern": "jemandem (Dativ) helfen",
+                    "meaning": "допомагати комусь"
+                  },
+                  {
+                    "pattern": "jemandem bei + Dativ helfen",
+                    "meaning": "допомагати комусь у чомусь / з чимось"
+                  }
+                ],
+                "footer_summary": "jemandem helfen: особа завжди у Dativ (mir, dir, dem Mann)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Mein Nachbar hat mir gestern mit dem Schloss geholfen.",
+          "uk": "Мій сусід учора допоміг мені із замком.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Perfekt (geholfen)", "Dativ (mir, mit dem Schloss)"],
+          "complexity_notes": [
+            "Рамка Perfekt: hat ... geholfen. Зверни увагу на зміну кореневої голосної у Partizip II: helfen → geholfen (e → o).",
+            "Два форми Dativ у реченні: 1) mir — від дієслова helfen; 2) mit dem Schloss — прийменник mit завжди вимагає Dativ (das Schloss → dem Schloss)."
+          ],
+          "tokens": [
+            {
+              "word": "Nachbar",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (Mein Nachbar) — підмет (слабка відміна N-Deklination у непрямих відмінках)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Nachbar",
+                "plural_nom": "die Nachbarn",
+                "context_case": "Nominativ · Однина"
+              }
+            },
+            {
+              "word": "hat",
+              "pos": "verb",
+              "frame_id": "frame_perf_helfen",
+              "context_role": "Допоміжне дієслово (1-ша частина рамки Perfekt: hat ... geholfen)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "Schloss",
+              "pos": "noun_n",
+              "context_role": "Dativ · Однина (mit dem Schloss) — після прийменника mit завжди Dativ",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "das Schloss",
+                "plural_nom": "die Schlösser",
+                "context_case": "Dativ · Однина (mit dem Schloss — замок)"
+              }
+            },
+            {
+              "word": "geholfen",
+              "pos": "verb",
+              "frame_id": "frame_perf_helfen",
+              "context_role": "Partizip II від helfen у кінці речення (2-га частина рамки Perfekt)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "helfen",
+                "praesens": "du h[i]lfst",
+                "praeteritum": "du halfst",
+                "perfekt": "hat geholfen",
+                "note": "Ряд аблауту: e – a – o (helfen – half – geholfen)."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Obwohl er wenig Zeit hatte, half er seinem Freund beim Umzug.",
+          "uk": "Хоча він мав мало часу, він допоміг своєму другові з переїздом.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Präteritum (half)", "Підрядне з obwohl", "helfen bei + Dativ"],
+          "complexity_notes": [
+            "Форма минулого часу Präteritum від helfen — er half (чергування e → a).",
+            "Коли підрядне речення з obwohl (хоча) стоїть ПЕРЕД головним, воно займає 1-шу позицію всього речення, тому після коми головне речення починається одразу з дієслова: ..., half er (правило «дієслово — дієслово» на межі коми: hatte, half).",
+            "Конструкція helfen bei + Dativ (beim = bei + dem Umzug) — допомагати під час якоїсь дії/процесу."
+          ],
+          "tokens": [
+            {
+              "word": "Obwohl",
+              "pos": "conj",
+              "frame_id": "frame_sub_obwohl",
+              "context_role": "Підрядний сполучник допусту («хоча») — дієслово hatte іде в кінець підрядного речення",
+              "popup": {
+                "type": "conj",
+                "title": "obwohl — хоча, незважаючи на те що",
+                "explanation": "Підрядний сполучник: дієслово в його частині стоїть у кінці (hatte), а головне речення після коми починається з дієслова (half er)."
+              }
+            },
+            {
+              "word": "hatte",
+              "pos": "verb",
+              "frame_id": "frame_sub_obwohl",
+              "context_role": "Präteritum · 3 ос. однини від haben (у кінці підрядного речення)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "У минулому часі з дієсловом haben частіше вживають коротку форму Präteritum (ich/er hatte)."
+              }
+            },
+            {
+              "word": "half",
+              "pos": "verb",
+              "context_role": "Präteritum · 3 ос. однини (er half) — стоїть одразу після коми перед підметом er",
+              "popup": {
+                "type": "verb",
+                "infinitive": "helfen",
+                "praesens": "du h[i]lfst",
+                "praeteritum": "du halfst",
+                "perfekt": "hat geholfen",
+                "note": "У Präteritum 1-ша та 3-тя особа однини сильних дієслів не мають закінчень: ich half, er half."
+              }
+            },
+            {
+              "word": "Freund",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (seinem Freund) — кому? (після дієслова helfen)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Freund",
+                "plural_nom": "die Freunde",
+                "context_case": "Dativ · Однина (seinem Freund)"
+              }
+            },
+            {
+              "word": "Umzug",
+              "pos": "noun_m",
+              "context_role": "Dativ · Однина (beim Umzug = bei dem Umzug) — допомагати з чим?",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Umzug",
+                "plural_nom": "die Umzüge",
+                "context_case": "Dativ · Однина (beim Umzug)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "headword": "warten",
+      "translation": "чекати (auf + Akkusativ)",
+      "category": "Дієслова з керуванням · Прийменникові",
+      "pack_type": "grammar_topic",
+      "part_of_speech": "verb",
+      "gender": "",
+      "plural": "",
+      "forms_summary": "warten (auf + Akkusativ) · du wartest · wartete · hat gewartet",
+      "sentences": [
+        {
+          "level": "просте",
+          "de": "Ich warte vor der Tür auf dich.",
+          "uk": "Я чекаю на тебе перед дверима.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["warten auf + Akkusativ", "vor + Dativ (Wo?)"],
+          "complexity_notes": [
+            "Дієслово warten має фіксоване прийменникове керування: warten auf + Akkusativ (чекати на когось/щось). Тому du в Akkusativ стає auf dich.",
+            "Контраст відмінків у тому самому реченні: vor der Tür відповідає на питання Wo? (де чекаю?), тому die Tür стоїть у Dativ (vor der Tür)."
+          ],
+          "tokens": [
+            {
+              "word": "warte",
+              "pos": "verb",
+              "frame_id": "frame_rektion_auf",
+              "context_role": "Präsens · 1 ос. однини (ich warte) — керує прийменником auf + Akkusativ",
+              "popup": {
+                "type": "verb",
+                "infinitive": "warten",
+                "praesens": "du wartest",
+                "praeteritum": "du wartetest",
+                "perfekt": "hat gewartet",
+                "note": "Слабке дієслово з основою на -t, тому додається сполучна -e-: du wartest, er wartet, hat gewartet.",
+                "constructions": [
+                  {
+                    "pattern": "auf jemanden / etwas warten · + Akkusativ",
+                    "meaning": "чекати на когось / на щось"
+                  },
+                  {
+                    "pattern": "Worauf wartest du? — Ich warte darauf, dass...",
+                    "meaning": "На що (неістота) ти чекаєш? — Я чекаю на те, щоб..."
+                  }
+                ],
+                "footer_summary": "warten auf + Akkusativ (Завжди Akkusativ, попри прийменник auf!)."
+              }
+            },
+            {
+              "word": "Tür",
+              "pos": "noun_f",
+              "context_role": "Dativ · Однина (vor der Tür) — місцезнаходження Wo? (де?)",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "die Tür",
+                "plural_nom": "die Türen",
+                "context_case": "Dativ · Однина (vor der Tür)"
+              }
+            },
+            {
+              "word": "auf",
+              "pos": "conj",
+              "frame_id": "frame_rektion_auf",
+              "context_role": "Фіксований прийменник дієслова warten (warten auf + Akkusativ: auf dich)",
+              "popup": {
+                "type": "conj",
+                "title": "warten auf + Akkusativ",
+                "explanation": "У дієслівному керуванні прийменник auf втрачає своє просторове значення («на поверхні») і ЗАВЖДИ вимагає Akkusativ: auf dich, auf den Bus."
+              }
+            }
+          ]
+        },
+        {
+          "level": "середнє",
+          "de": "Auf wen hast du so lange gewartet?",
+          "uk": "На кого ти так довго чекав?",
+          "source": "Створено для навчання",
+          "grammar_tags": ["Auf wen? (Істота)", "Perfekt"],
+          "complexity_notes": [
+            "Як поставити питання до warten auf + Akkusativ: якщо питаємо про ЛЮДИНУ (істоту), використовуємо прийменник + питальне слово в Akkusativ: Auf wen? (На кого?).",
+            "Якби питання було про НЕІСТОТУ (предмет чи подію), вони б злилися в одне слово: Worauf hast du gewartet? (На що ти чекав?)."
+          ],
+          "tokens": [
+            {
+              "word": "hast",
+              "pos": "verb",
+              "frame_id": "frame_perf_warten",
+              "context_role": "Допоміжне дієслово у Perfekt (рамка: hast ... gewartet)",
+              "popup": {
+                "type": "verb",
+                "infinitive": "haben",
+                "praesens": "du hast",
+                "praeteritum": "du hattest",
+                "perfekt": "hat gehabt",
+                "note": "1-ша частина рамки Perfekt."
+              }
+            },
+            {
+              "word": "gewartet",
+              "pos": "verb",
+              "frame_id": "frame_perf_warten",
+              "context_role": "Partizip II від warten у кінці питального речення",
+              "popup": {
+                "type": "verb",
+                "infinitive": "warten",
+                "praesens": "du wartest",
+                "praeteritum": "du wartetest",
+                "perfekt": "hat gewartet",
+                "note": "Керування зберігається в усіх часах: auf + Akkusativ."
+              }
+            }
+          ]
+        },
+        {
+          "level": "складніше",
+          "de": "Wir warten darauf, dass unser Nachbar uns den Schlüssel gibt.",
+          "uk": "Ми чекаємо на те, що наш сусід дасть нам ключ.",
+          "source": "Створено для навчання",
+          "grammar_tags": ["warten darauf, dass...", "Складнопідрядне речення"],
+          "complexity_notes": [
+            "Коли об'єктом очікування є ціла подія (підрядне речення з dass), у головному реченні ставиться займенниковий прислівник darauf (da + r + auf = «на те, щоб/що»).",
+            "У підрядному реченні після dass сильне дієслово gibt (3 ос. однини від geben зі зміною e → i) стоїть у самому кінці, керуючи двома додатками: uns (Dativ) + den Schlüssel (Akkusativ)."
+          ],
+          "tokens": [
+            {
+              "word": "warten",
+              "pos": "verb",
+              "frame_id": "frame_darauf",
+              "context_role": "Präsens · 1 ос. множини (wir warten) у зв'язці з darauf",
+              "popup": {
+                "type": "verb",
+                "infinitive": "warten",
+                "praesens": "du wartest",
+                "praeteritum": "du wartetest",
+                "perfekt": "hat gewartet",
+                "note": "З підрядним реченням утворює конструкцію warten darauf, dass..."
+              }
+            },
+            {
+              "word": "darauf",
+              "pos": "conj",
+              "frame_id": "frame_darauf",
+              "context_role": "Займенниковий прислівник (da + r + auf) — місток до підрядного речення з dass",
+              "popup": {
+                "type": "conj",
+                "title": "darauf, dass... — на те, що...",
+                "explanation": "Оскільки прийменник auf починається на голосну, між da- та -auf додається -r-: darauf."
+              }
+            },
+            {
+              "word": "Nachbar",
+              "pos": "noun_m",
+              "context_role": "Nominativ · Однина (unser Nachbar) — підмет підрядного речення",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Nachbar",
+                "plural_nom": "die Nachbarn",
+                "context_case": "Nominativ · Однина"
+              }
+            },
+            {
+              "word": "Schlüssel",
+              "pos": "noun_m",
+              "context_role": "Akkusativ · Однина (den Schlüssel) — прямий додаток від gibt",
+              "popup": {
+                "type": "noun",
+                "singular_nom": "der Schlüssel",
+                "plural_nom": "die Schlüssel",
+                "context_case": "Akkusativ · Однина (den Schlüssel)"
+              }
+            },
+            {
+              "word": "gibt",
+              "pos": "verb",
+              "context_role": "Präsens · 3 ос. однини (er gibt, зміна e → i) — у кінці підрядного речення після dass",
+              "popup": {
+                "type": "verb",
+                "infinitive": "geben",
+                "praesens": "du g[i]bst",
+                "praeteritum": "du gabst",
+                "perfekt": "hat gegeben",
+                "note": "Чергування в Präsens: e → i (du gibst, er gibt)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

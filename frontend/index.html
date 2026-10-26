@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deutsch im Kontext — Вивчення слів і граматики в реченнях</title>
+  <link rel="stylesheet" href="/static/styles.css?v=5" />
+</head>
+<body data-ui-theme="v2">
+  <!-- Верхня панель навігації + Перемикач 3 інтерфейсів -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-badge">DE</span>
+        <div>
+          <h1 class="brand-title">Deutsch im Kontext</h1>
+          <p class="brand-subtitle">Слова у формах · Граматичні підтеми · Фонове аудіо</p>
+        </div>
+      </div>
+
+      <!-- Перемикач 3 варіантів інтерфейсу -->
+      <div class="ui-switcher" role="group" aria-label="Вибір дизайну інтерфейсу">
+        <span class="ui-switcher-label">Вигляд:</span>
+        <button class="ui-switch-btn" data-theme="v1" title="Двоколонкова сітка карток (оригінальний макет)">
+          1 · Класична сітка
+        </button>
+        <button class="ui-switch-btn active" data-theme="v2" title="Простий і теплий режим: одне слово в фокусі + зручний список зліва">
+          2 · Дружелюбний фокус
+        </button>
+        <button class="ui-switch-btn" data-theme="v3" title="3 рівні складності розташовані горизонтально зліва направо">
+          3 · Три сходинки
+        </button>
+      </div>
+
+      <nav class="main-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="all" id="tab-all">
+          Усі <span class="tab-count" id="count-all">0</span>
+        </button>
+        <button class="tab-btn" data-tab="word_list" id="tab-words">
+          🗂 Словник
+        </button>
+        <button class="tab-btn" data-tab="grammar_topic" id="tab-grammar">
+          ⚡ Підтеми
+        </button>
+        <button class="tab-btn tab-btn-accent" data-tab="builder" id="tab-builder">
+          ➕ Додати слова
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Панель фільтрів і налаштувань відображення -->
+  <section class="controls-bar" id="study-controls">
+    <div class="controls-inner">
+      <div class="filter-group">
+        <label for="category-select" class="control-label">Тема:</label>
+        <select id="category-select" class="control-select">
+          <option value="all">Усі категорії</option>
+        </select>
+      </div>
+
+      <div class="search-group">
+        <input
+          type="search"
+          id="search-input"
+          class="control-input"
+          placeholder="Пошук слова або перекладу..."
+        />
+      </div>
+
+      <div class="view-toggles">
+        <button class="btn-primary btn-sm" id="btn-quick-random3" title="Запустити озвучку німецьких речень: випадковий порядок слів, по 3 речення одного слова підряд">
+          🎲▶ Рандом (по 3 речення)
+        </button>
+        <label class="toggle-pill" title="Підсвічувати обидві частини присудка/рамки речення (Satzklammer) при наведенні">
+          <input type="checkbox" id="toggle-satzklammer" checked />
+          <span>🔗 Рамка речення</span>
+        </label>
+        <label class="toggle-pill" title="Показувати граматичні теги над реченням">
+          <input type="checkbox" id="toggle-tags" checked />
+          <span>🏷 Мітки</span>
+        </label>
+        <button class="btn-secondary btn-sm" id="btn-expand-all" title="Розгорнути або згорнути всі пояснення">
+          ► Усі пояснення
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Основний контент -->
+  <main class="main-container">
+    <div id="study-view" class="study-layout">
+      <!-- Бокова панель слів (використовується у Варіанті 2 «Дружелюбний фокус») -->
+      <aside id="focus-sidebar" class="focus-sidebar">
+        <div class="focus-sidebar-header">
+          <span class="sidebar-title">Слова в наборі</span>
+          <span class="sidebar-counter" id="focus-counter-badge">1 / 5</span>
+        </div>
+        <div id="focus-word-list" class="focus-word-list"></div>
+      </aside>
+
+      <!-- Контейнер карток + навігація для фокус-режиму -->
+      <div class="study-stage">
+        <div id="focus-nav-bar" class="focus-nav-bar">
+          <button class="focus-nav-btn" id="btn-focus-prev">← Попереднє слово</button>
+          <div class="focus-progress-dots" id="focus-dots"></div>
+          <button class="focus-nav-btn" id="btn-focus-next">Наступне слово →</button>
+        </div>
+
+        <div id="cards-grid" class="cards-grid"></div>
+      </div>
+    </div>
+
+    <!-- Вкладка: AI Конструктор та Імпорт JSON (Напівавтоматичний режим) -->
+    <div id="builder-view" class="builder-view hidden">
+      <div class="builder-header-card">
+        <h2>Напівавтоматичний генератор навчальних матеріалів</h2>
+        <p>
+          Ви можете скинути список слів або назву граматичної підтеми прямо <strong>мені в чат Antigravity</strong>
+          (я сам згенерую картки й озвучку за регламентом <code>docs/CONTENT_GENERATION_GUIDE.md</code>),
+          або згенерувати готовий промпт нижче для <strong>Codex / ChatGPT / Claude</strong> і вставити отриманий JSON.
+        </p>
+      </div>
+
+      <div class="builder-columns">
+        <!-- Ліва колонка: Крок 1 — Створення промпту -->
+        <div class="builder-panel">
+          <div class="panel-step-badge">Крок 1 · Формування завдання для ШІ</div>
+          <h3>Створити промпт із вашим активним словником ($i+1$)</h3>
+
+          <div class="form-row">
+            <label>Тип генерації:</label>
+            <div class="radio-cards">
+              <label class="radio-card active" id="rc-wordlist">
+                <input type="radio" name="gen-mode" value="word_list" checked />
+                <strong>🗂 Список слів у реченнях</strong>
+                <span>Кожне слово у 3 реченнях та різних відмінках/часах</span>
+              </label>
+              <label class="radio-card" id="rc-grammar">
+                <input type="radio" name="gen-mode" value="grammar_topic" />
+                <strong>⚡ Граматична підтема</strong>
+                <span>Модальні/сильні дієслова, керування відмінками тощо</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="preset-select">Швидкі шаблони підтем (опціонально):</label>
+            <select id="preset-select" class="control-select full-width">
+              <option value="">— Оберіть шаблон або введіть власні слова нижче —</option>
+              <option value="preset_strong_e_i">Сильні дієслова зі зміною голосної e → i / ie (geben, helfen, sprechen, sehen, nehmen)</option>
+              <option value="preset_strong_a_ae">Сильні дієслова зі зміною a → ä (fahren, schlafen, tragen, waschen, einladen)</option>
+              <option value="preset_modals">Модальні дієслова в Präsens, Präteritum та з інфінітивною рамкою (können, müssen, wollen, dürfen, sollen)</option>
+              <option value="preset_dativ_verbs">Дієслова, що вимагають Dativ (helfen, danken, gehören, gefallen, antworten, glauben)</option>
+              <option value="preset_rektion">Дієслова з фіксованими прийменниками (warten auf + Akk, denken an + Akk, sich freuen auf/über, träumen von + Dat)</option>
+              <option value="preset_wechsel">Прийменники подвійного керування Wechselpräpositionen (in, auf, an, під, над: Wo? Dativ vs Wohin? Akkusativ)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="builder-category">Назва категорії / підтеми:</label>
+            <input
+              type="text"
+              id="builder-category"
+              class="control-input full-width"
+              placeholder="Наприклад: Іменники · Робота та офіс або Дієслова з Dativ"
+              value="Нові слова · Контекст"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="builder-words">Введіть список слів або опис граматичної підтеми:</label>
+            <textarea
+              id="builder-words"
+              class="control-textarea"
+              rows="4"
+              placeholder="Наприклад: der Tisch, legen, лежати (liegen), ставити (stellen), стояти (stehen) — показати різницю Wo? (Dativ) та Wohin? (Akkusativ)"
+            ></textarea>
+          </div>
+
+          <div class="form-row checkbox-row">
+            <label>
+              <input type="checkbox" id="builder-include-vocab" checked />
+              Автоматично додати в промпт уже наявні в базі слова (метод $i+1$), щоб ШІ комбінував їх у реченнях
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-primary" id="btn-generate-prompt">
+              ✨ Згенерувати покроковий промпт
+            </button>
+            <button class="btn-secondary" id="btn-copy-prompt" disabled>
+              📋 Скопіювати промпт
+            </button>
+          </div>
+
+          <div class="form-row">
+            <label for="prompt-output">Готовий промпт (скопіюйте в Codex / ChatGPT або сюди в чат):</label>
+            <textarea id="prompt-output" class="control-textarea code-textarea" rows="8" readonly placeholder="Натисніть «Згенерувати покроковий промпт»..."></textarea>
+          </div>
+        </div>
+
+        <!-- Права колонка: Крок 2 — Імпорт JSON та Озвучка -->
+        <div class="builder-panel">
+          <div class="panel-step-badge">Крок 2 · Імпорт та автоматична озвучка</div>
+          <h3>Вставте згенерований JSON-пакет</h3>
+          <p class="panel-hint">
+            Після того як модель згенерує JSON за схемою, вставте його сюди. Додаток збереже картки у базу SQLite і автоматично синтезує німецьку (1.0x та 0.8x) і українську озвучку через <code>Edge-TTS</code>.
+          </p>
+
+          <div class="form-row">
+            <textarea
+              id="json-import-input"
+              class="control-textarea code-textarea"
+              rows="14"
+              placeholder='{ "pack_title": "...", "category": "...", "cards": [ ... ] }'
+            ></textarea>
+          </div>
+
+          <div class="form-row checkbox-row">
+            <label>
+              <input type="checkbox" id="import-run-tts" checked />
+              Одразу згенерувати MP3 озвучку для всіх нових речень (Edge-TTS)
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-primary" id="btn-import-json">
+              📥 Імпортувати JSON та озвучити
+            </button>
+            <button class="btn-secondary" id="btn-regenerate-all-tts" title="Перевірити та догенерувати MP3 для всіх речень у базі">
+              🔊 Озвучити всі речення в базі
+            </button>
+          </div>
+
+          <div id="import-status" class="status-box hidden"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Плаваючий попап граматичного розбору слова -->
+  <div id="word-popup" class="word-popup hidden" role="dialog" aria-hidden="true"></div>
+
+  <!-- Нижній док: Фоновий Аудіо-Плеєр для прослуховування під час роботи за ПК -->
+  <footer class="audio-dock" id="audio-dock">
+    <div class="audio-dock-inner">
+      <div class="player-controls">
+        <button class="player-btn" id="btn-prev" title="Попереднє речення (←)">⏮</button>
+        <button class="player-btn player-btn-main" id="btn-play-pause" title="Старт / Пауза фонового режиму (Пробіл)">
+          ▶
+        </button>
+        <button class="player-btn" id="btn-next" title="Наступне речення (→)">⏭</button>
+      </div>
+
+      <div class="player-now-playing">
+        <div class="now-playing-meta">
+          <span class="phase-badge" id="player-phase-badge">Готовий до фонового прослуховування</span>
+          <span class="now-playing-card-tag" id="player-card-tag">Натисніть ▶ для старту</span>
+        </div>
+        <div class="now-playing-de" id="player-de-text">
+          Працюйте за ПК і слухайте речення у фоні з паузами для самоперевірки
+        </div>
+        <div class="now-playing-uk" id="player-uk-text"></div>
+      </div>
+
+      <div class="player-settings">
+        <div class="player-setting-item">
+          <label for="audio-pattern-select">Режим:</label>
+          <select id="audio-pattern-select" class="dock-select">
+            <option value="random_word_3" selected>🎲 Рандом слів · по 3 нім. речення підряд</option>
+            <option value="recall">🎯 УКР → Пауза → НІМ (0.8x) → НІМ (1.0x)</option>
+            <option value="immersion">🎧 НІМ (1.0x) → УКР → НІМ (1.0x)</option>
+            <option value="de_only">🇩🇪 Послідовно: НІМ (0.8x → 1.0x)</option>
+            <option value="de_fast">⚡ Послідовно: Тільки НІМ (1.0x підряд)</option>
+          </select>
+        </div>
+
+        <div class="player-setting-item">
+          <label for="pause-seconds-select">Пауза:</label>
+          <select id="pause-seconds-select" class="dock-select dock-select-sm">
+            <option value="1">1 с</option>
+            <option value="1.5" selected>1.5 с</option>
+            <option value="2">2 с</option>
+            <option value="3">3 с</option>
+            <option value="4">4 с</option>
+          </select>
+        </div>
+
+        <label class="dock-checkbox" title="Нескінченне повторення поточного списку по колу">
+          <input type="checkbox" id="player-loop" checked />
+          <span>🔁 По колу</span>
+        </label>
+      </div>
+    </div>
+  </footer>
+
+  <audio id="global-audio-player" preload="auto"></audio>
+  <script src="/static/app.js?v=5"></script>
+</body>
+</html>
