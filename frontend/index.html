@@ -42,6 +42,7 @@
         <button class="tab-btn" data-tab="grammar_topic" id="tab-grammar">
           ⚡ Підтеми
         </button>
+        <button class="tab-btn" data-tab="review" id="tab-review">Повторити сьогодні</button>
         <button class="tab-btn tab-btn-accent" data-tab="builder" id="tab-builder">
           ➕ Додати слова
         </button>
@@ -110,6 +111,33 @@
         <div id="cards-grid" class="cards-grid"></div>
       </div>
     </div>
+
+    <section id="review-view" class="builder-panel review-panel hidden" aria-labelledby="review-title">
+      <h2 id="review-title" tabindex="-1">Повторити сьогодні</h2>
+      <div class="review-controls">
+        <label for="review-mode">Режим</label>
+        <select id="review-mode" class="control-select">
+          <option value="text">Текст</option>
+          <option value="audio">Аудіо</option>
+        </select>
+      </div>
+      <p id="review-status" role="status"></p>
+      <button id="review-refresh" class="btn-secondary hidden">Оновити чергу</button>
+      <div id="review-exercise" class="hidden">
+        <p id="review-prompt" class="sentence-de" lang="de"></p>
+        <div id="review-listen" class="review-controls hidden">
+          <button class="btn-secondary" id="review-audio">Слухати німецькою</button>
+          <button class="btn-secondary" id="review-audio-slow">Повільніше</button>
+        </div>
+        <button class="btn-primary" id="review-reveal">Показати відповідь</button>
+        <div id="review-answer"></div>
+        <div id="review-ratings" class="review-controls hidden" role="group" aria-label="Оцінка відповіді">
+          <button class="btn-secondary" data-rating="again">Не згадав</button>
+          <button class="btn-secondary" data-rating="hard">Важко</button>
+          <button class="btn-primary" data-rating="good">Згадав</button>
+        </div>
+      </div>
+    </section>
 
     <!-- Вкладка: AI Конструктор та Імпорт JSON (Напівавтоматичний режим) -->
     <div id="builder-view" class="builder-view hidden">

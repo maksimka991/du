@@ -43,13 +43,13 @@ def cmd_import(file_path: str, run_tts: bool, preview: bool) -> None:
             print(f"ID речень для повторної озвучки: {stats['failed_sentence_ids']}")
 
 
-def cmd_export_vocab() -> None:
+def cmd_export_vocab(include_all: bool) -> None:
     init_db()
-    vocab = get_known_vocabulary()
+    vocab = get_known_vocabulary(reviewed_only=not include_all)
     if not vocab:
-        print("База слів порожня.")
+        print("База слів порожня." if include_all else "Базова лексика A1–A2")
         return
-    print(f"Активний словник користувача ({len(vocab)} слів):")
+    print(f"{'Усі картки' if include_all else 'Активний словник користувача'} ({len(vocab)} слів):")
     for item in vocab:
         print(
             f"- {item['headword']} — {item['translation']} "
@@ -77,9 +77,10 @@ def main() -> None:
     )
     p_import.add_argument("--preview", action="store_true", help="Перевірити пакет без імпорту")
 
-    sub.add_parser(
-        "export-vocab", help="Вивести список усіх відомих слів користувача (i+1)"
+    p_vocab = sub.add_parser(
+        "export-vocab", help="Вивести слова, які користувач згадав двічі поспіль (i+1)"
     )
+    p_vocab.add_argument("--all", action="store_true", help="Вивести всі картки")
 
     p_tts = sub.add_parser("tts", help="Згенерувати відсутні MP3-файли озвучки")
     p_tts.add_argument(
@@ -90,7 +91,7 @@ def main() -> None:
     if args.command == "import":
         cmd_import(args.file, args.tts, args.preview)
     elif args.command == "export-vocab":
-        cmd_export_vocab()
+        cmd_export_vocab(args.all)
     elif args.command == "tts":
         cmd_tts(args.force)
     else:

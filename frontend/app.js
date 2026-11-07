@@ -4,7 +4,7 @@ const state = {
   categories: [],
   uiTheme: localStorage.getItem("du_ui_theme") || "v2", // "v1" | "v2" | "v3"
   focusedCardIndex: 0,
-  activeTab: "all", // "all" | "word_list" | "grammar_topic" | "builder"
+  activeTab: "all",
   selectedCategory: "all",
   searchQuery: "",
   showSatzklammer: true,
@@ -17,7 +17,10 @@ const state = {
   podcastAbortController: null,
   currentAudio: null,
   currentAudioResolve: null,
+  audioRequest: 0,
 };
+
+const review = { current: null, request: 0, saving: false };
 
 // Шаблони для швидкого вибору граматичних підтем у конструкторі
 const GRAMMAR_PRESETS = {
@@ -113,26 +116,32 @@ function bindUIEvents() {
       document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       const tab = btn.dataset.tab;
+      if (state.activeTab === "review") {
+        review.request++;
+        stopCurrentAudio();
+        hidePopupImmediate();
+      }
       state.activeTab = tab;
 
-      const studyView = document.getElementById("study-view");
-      const studyControls = document.getElementById("study-controls");
-      const builderView = document.getElementById("builder-view");
+      const studying = tab !== "builder" && tab !== "review";
+      document.getElementById("study-view").classList.toggle("hidden", !studying);
+      document.getElementById("study-controls").classList.toggle("hidden", !studying);
+      document.getElementById("builder-view").classList.toggle("hidden", tab !== "builder");
+      document.getElementById("review-view").classList.toggle("hidden", tab !== "review");
+      document.getElementById("audio-dock").classList.toggle("hidden", tab === "review");
 
-      if (tab === "builder") {
-        studyView.classList.add("hidden");
-        studyControls.classList.add("hidden");
-        builderView.classList.remove("hidden");
-      } else {
-        studyView.classList.remove("hidden");
-        studyControls.classList.remove("hidden");
-        builderView.classList.add("hidden");
+      if (tab === "review") {
+        stopPodcastPlayback();
+        document.getElementById("review-title").focus();
+        loadReview();
+      } else if (studying) {
         state.selectedCategory = "all";
         categorySelect.value = "all";
         loadCards();
       }
     });
   });
+  bindReviewEvents();
 
   // Фільтр категорії та пошук
   categorySelect.addEventListener("change", () => {
@@ -210,7 +219,7 @@ function bindUIEvents() {
 
   // Гарячі клавіші (Пробіл / Стрілки)
   document.addEventListener("keydown", (e) => {
-    if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName)) return;
+    if (state.activeTab === "review" || e.target.closest?.("button, input, textarea, select, summary, .word-token")) return;
     if (e.code === "Space") {
       e.preventDefault();
       togglePodcastPlayback();
@@ -522,6 +531,8 @@ function renderInteractiveSentence(container, deText, tokens) {
     const span = document.createElement("span");
     span.className = `word-token pos-${tokenData.pos || "verb"}`;
     span.textContent = part;
+    span.tabIndex = 0;
+    span.setAttribute("role", "button");
     if (tokenData.frame_id) {
       span.dataset.frameId = tokenData.frame_id;
     }
@@ -541,6 +552,14 @@ function renderInteractiveSentence(container, deText, tokens) {
       e.stopPropagation();
       clearTimeout(popupHideTimeout);
       showWordPopup(span, tokenData);
+    });
+    span.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        span.click();
+      } else if (event.key === "Escape") {
+        hidePopupImmediate();
+      }
     });
 
     container.appendChild(span);
@@ -735,6 +754,7 @@ function getGlobalAudioElement() {
 }
 
 function stopCurrentAudio() {
+  state.audioRequest++;
   const audio = getGlobalAudioElement();
   audio.onended = null;
   audio.onerror = null;
@@ -757,13 +777,16 @@ function stopCurrentAudio() {
 
 async function playAudioUrl(url, fallbackText = "", fallbackLang = "de-DE", slow = false) {
   stopCurrentAudio();
+  const request = state.audioRequest;
   if (url) {
     return new Promise((resolve) => {
       state.currentAudioResolve = resolve;
       const audio = getGlobalAudioElement();
       state.currentAudio = audio;
+      let fallingBack = false;
 
       const finish = () => {
+        if (request !== state.audioRequest) return;
         if (state.currentAudioResolve === resolve) {
           state.currentAudioResolve = null;
         }
@@ -772,12 +795,15 @@ async function playAudioUrl(url, fallbackText = "", fallbackLang = "de-DE", slow
         resolve();
       };
 
-      audio.onended = finish;
-      audio.onerror = () => {
+      const fallback = () => {
+        if (request !== state.audioRequest || fallingBack) return;
+        fallingBack = true;
         audio.onended = null;
         audio.onerror = null;
         fallbackBrowserTTS(fallbackText, fallbackLang, slow).then(finish);
       };
+      audio.onended = finish;
+      audio.onerror = fallback;
 
       audio.src = url;
       audio.playbackRate = 1.0;
@@ -785,7 +811,7 @@ async function playAudioUrl(url, fallbackText = "", fallbackLang = "de-DE", slow
       if (playPromise !== undefined) {
         playPromise.catch((err) => {
           console.warn("Audio play fallback:", err);
-          fallbackBrowserTTS(fallbackText, fallbackLang, slow).then(finish);
+          fallback();
         });
       }
     });
@@ -809,6 +835,8 @@ function fallbackBrowserTTS(text, lang = "de-DE", slow = false) {
 }
 
 async function playSingleTTS(text, lang = "de", slow = false) {
+  stopCurrentAudio();
+  const request = state.audioRequest;
   try {
     const res = await fetch("/api/tts", {
       method: "POST",
@@ -816,12 +844,15 @@ async function playSingleTTS(text, lang = "de", slow = false) {
       body: JSON.stringify({ text, lang, slow }),
     });
     const data = await res.json();
+    if (request !== state.audioRequest) return;
     if (data.ok && data.url) {
       await playAudioUrl(data.url, text, lang === "de" ? "de-DE" : "uk-UA", slow);
       return;
     }
   } catch (_) {}
-  await fallbackBrowserTTS(text, lang === "de" ? "de-DE" : "uk-UA", slow);
+  if (request === state.audioRequest) {
+    await fallbackBrowserTTS(text, lang === "de" ? "de-DE" : "uk-UA", slow);
+  }
 }
 
 async function playSentenceAudio(sent, kind = "de_normal") {
@@ -1243,6 +1274,116 @@ function escapeHtml(str) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function bindReviewEvents() {
+  document.getElementById("review-mode").addEventListener("change", () => {
+    stopCurrentAudio();
+    hidePopupImmediate();
+    showReviewPrompt();
+  });
+  document.getElementById("review-refresh").addEventListener("click", () => loadReview(true));
+  document.getElementById("review-audio").addEventListener("click", () => {
+    if (review.current) playSentenceAudio(review.current.sentence);
+  });
+  document.getElementById("review-audio-slow").addEventListener("click", () => {
+    if (review.current) playSentenceAudio(review.current.sentence, "de_slow");
+  });
+  document.getElementById("review-reveal").addEventListener("click", () => {
+    if (!review.current) return;
+    document.getElementById("review-prompt").classList.add("hidden");
+    document.getElementById("review-listen").classList.add("hidden");
+    document.getElementById("review-reveal").classList.add("hidden");
+    const block = createSentenceBlock(null, review.current.sentence);
+    block.id = "review-result-sentence";
+    block.querySelector(".sentence-de").lang = "de";
+    block.querySelector("details").open = true;
+    document.getElementById("review-answer").replaceChildren(block);
+    document.getElementById("review-ratings").classList.remove("hidden");
+    const answer = block.querySelector(".sentence-uk");
+    answer.tabIndex = -1;
+    answer.focus();
+  });
+  document.querySelectorAll("#review-ratings button").forEach((button) => {
+    button.addEventListener("click", () => submitReview(button.dataset.rating, button));
+  });
+}
+
+function showReviewPrompt(focus = false) {
+  const audioMode = document.getElementById("review-mode").value === "audio";
+  const prompt = document.getElementById("review-prompt");
+  prompt.textContent = audioMode ? "" : review.current?.sentence.de || "";
+  prompt.classList.toggle("hidden", audioMode);
+  document.getElementById("review-exercise").classList.toggle("hidden", !review.current);
+  document.getElementById("review-listen").classList.toggle("hidden", !audioMode);
+  document.getElementById("review-answer").replaceChildren();
+  document.getElementById("review-ratings").classList.add("hidden");
+  document.getElementById("review-reveal").classList.remove("hidden");
+  if (focus && review.current) {
+    document.getElementById(audioMode ? "review-audio" : "review-reveal").focus();
+  }
+}
+
+async function loadReview(focus = false) {
+  const request = ++review.request;
+  review.current = null;
+  review.saving = false;
+  document.getElementById("review-mode").disabled = false;
+  document.querySelectorAll("#review-ratings button").forEach((button) => (button.disabled = false));
+  const status = document.getElementById("review-status");
+  const refresh = document.getElementById("review-refresh");
+  refresh.classList.add("hidden");
+  status.textContent = "Завантажуємо чергу…";
+  showReviewPrompt();
+  try {
+    const response = await fetch("/api/review/queue", { cache: "no-store" });
+    if (!response.ok) throw new Error("Не вдалося завантажити чергу.");
+    const { queue } = await response.json();
+    if (request !== review.request) return;
+    review.current = queue[0] ?? null;
+    status.textContent = review.current ? "Пригадайте зміст речення." : "Зараз немає карток до повторення.";
+    showReviewPrompt(focus);
+  } catch (_) {
+    if (request !== review.request) return;
+    status.textContent = "Не вдалося завантажити чергу.";
+  }
+  if (!review.current) {
+    refresh.classList.remove("hidden");
+    if (focus) refresh.focus();
+  }
+}
+
+async function submitReview(rating, button) {
+  if (!review.current || review.saving) return;
+  const request = review.request;
+  const mode = document.getElementById("review-mode");
+  const buttons = document.querySelectorAll("#review-ratings button");
+  const status = document.getElementById("review-status");
+  review.saving = true;
+  mode.disabled = true;
+  buttons.forEach((control) => (control.disabled = true));
+  stopCurrentAudio();
+  hidePopupImmediate();
+  try {
+    const response = await fetch(`/api/review/${review.current.card_id}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating }),
+    });
+    if (request !== review.request) return;
+    if (response.ok || response.status === 409 || response.status === 404) {
+      await loadReview(true);
+      return;
+    }
+    throw new Error("Не вдалося зберегти оцінку.");
+  } catch (_) {
+    if (request !== review.request) return;
+    status.textContent = "Не вдалося зберегти оцінку. Спробуйте ще раз.";
+    review.saving = false;
+    mode.disabled = false;
+    buttons.forEach((control) => (control.disabled = false));
+    button.focus();
+  }
 }
 
 function escapeAttr(str) {

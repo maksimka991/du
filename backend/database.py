@@ -75,6 +75,21 @@ def init_db() -> None:
                 status TEXT NOT NULL DEFAULT 'pending',
                 created_at TEXT NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS review_state (
+                card_id INTEGER PRIMARY KEY REFERENCES cards(id) ON DELETE CASCADE,
+                due_at TEXT NOT NULL,
+                interval_minutes INTEGER NOT NULL,
+                recall_streak INTEGER NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS review_history (
+                id INTEGER PRIMARY KEY,
+                card_id INTEGER NOT NULL REFERENCES cards(id) ON DELETE CASCADE,
+                rating TEXT NOT NULL CHECK (rating IN ('again', 'hard', 'good')),
+                reviewed_at TEXT NOT NULL,
+                due_at TEXT NOT NULL
+            );
             """
         )
     conn.close()
@@ -266,11 +281,12 @@ def get_all_cards(
     return result
 
 
-def get_known_vocabulary() -> List[Dict[str, str]]:
+def get_known_vocabulary(*, reviewed_only: bool = False) -> List[Dict[str, Any]]:
     init_db()
     conn = get_connection()
+    reviewed = "WHERE id IN (SELECT card_id FROM review_state WHERE recall_streak >= 2)" if reviewed_only else ""
     rows = conn.execute(
-        "SELECT headword, translation, category, part_of_speech, mastery_level FROM cards ORDER BY id ASC"
+        f"SELECT headword, translation, category, part_of_speech, mastery_level FROM cards {reviewed} ORDER BY id ASC"
     ).fetchall()
     conn.close()
     return [dict(r) for r in rows]

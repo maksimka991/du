@@ -21,6 +21,7 @@ from backend.tts_service import (
 )
 
 from backend.pack import parse_pack
+from backend.review import Rating, get_review_queue, record_review
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
@@ -63,6 +64,10 @@ class OnDemandTTSRequest(BaseModel):
     slow: bool = False
 
 
+class ReviewRequest(BaseModel):
+    rating: Rating
+
+
 @app.on_event("startup")
 async def startup_event():
     init_db()
@@ -100,6 +105,21 @@ def api_get_vocab():
     return {"vocab": vocab, "count": len(vocab)}
 
 
+@app.get("/api/review/queue")
+def api_review_queue():
+    return {"queue": get_review_queue()}
+
+
+@app.post("/api/review/{card_id}")
+def api_record_review(card_id: int, req: ReviewRequest):
+    try:
+        return record_review(card_id, req.rating)
+    except LookupError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except ValueError as error:
+        raise HTTPException(status_code=409, detail=str(error)) from error
+
+
 @app.patch("/api/cards/{card_id}")
 def api_update_card(card_id: int, payload: CardStatusUpdate):
     update_card_status(
@@ -112,7 +132,7 @@ def api_update_card(card_id: int, payload: CardStatusUpdate):
 
 @app.post("/api/build-prompt")
 def api_build_prompt(req: PromptBuildRequest):
-    vocab = get_known_vocabulary() if req.include_known_vocab else []
+    vocab = get_known_vocabulary(reviewed_only=True) if req.include_known_vocab else []
     known_words_str = (
         ", ".join(f"{v['headword']} ({v['translation']})" for v in vocab)
         if vocab

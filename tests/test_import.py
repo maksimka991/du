@@ -13,7 +13,7 @@ from backend.app import app
 PACK = storage.DEMO_DIR / "packs" / "starter_pack.json"
 
 
-class ImportTests(unittest.TestCase):
+class LibraryTestCase(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
@@ -39,6 +39,8 @@ class ImportTests(unittest.TestCase):
     def send(self, raw, **options):
         return self.client.post("/api/import-pack", json={"json_text": raw, "generate_tts": False, **options})
 
+
+class ImportTests(LibraryTestCase):
     def test_invalid_packages_leave_database_unchanged(self):
         original = self.snapshot()
         for raw in ("null", '{"cards":[{}]}', '{"cards":[{"headword":"Test","sentences":[]}]}'):

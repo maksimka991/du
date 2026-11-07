@@ -1380,6 +1380,29 @@ details[open] .complexity-arrow {
   user-select: none;
 }
 
+.review-panel {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.review-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 1rem;
+}
+
+.review-panel button,
+.review-panel select {
+  min-height: 44px;
+}
+
+.review-panel :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 .hidden {
   display: none !important;
 }
