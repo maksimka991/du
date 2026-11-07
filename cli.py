@@ -1,6 +1,5 @@
 import argparse
 import asyncio
-import json
 import sys
 from pathlib import Path
 
@@ -10,28 +9,38 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
 from backend.database import init_db, import_pack_data, get_known_vocabulary
+from backend.pack import parse_pack
 from backend.tts_service import generate_missing_audio_all
 
 
-def cmd_import(file_path: str, run_tts: bool) -> None:
+def cmd_import(file_path: str, run_tts: bool, preview: bool) -> None:
     path = Path(file_path)
     if not path.exists():
         print(f"[Error] File not found: {path}")
         sys.exit(1)
 
-    pack_data = json.loads(path.read_text(encoding="utf-8"))
-    res = import_pack_data(pack_data)
+    try:
+        pack_data = parse_pack(path.read_text(encoding="utf-8-sig"))
+    except (ValueError, OSError) as error:
+        sys.exit(f"[Error] {error}")
+    res = import_pack_data(pack_data, preview=preview)
+    counts = res["counts"]
+    print(f"Нових: {counts['new']}; змінених: {counts['changed']}; незмінних: {counts['unchanged']}.")
+    if preview or not res["imported_cards"]:
+        return
     print(
         f"[OK] Imported pack #{res['pack_id']}: "
         f"{res['imported_cards']} cards, {res['imported_sentences']} sentences."
     )
     if run_tts:
         print("[TTS] Generating MP3 audio files via Edge-TTS...")
-        stats = asyncio.run(generate_missing_audio_all(force=False))
+        stats = asyncio.run(generate_missing_audio_all(sentence_ids=res["audio_sentence_ids"]))
         print(
             f"[TTS OK] Generated: {stats['generated']}, Failed: {stats['failed']} "
             f"(Total checked: {stats['total_checked']})"
         )
+        if stats["failed"]:
+            print(f"ID речень для повторної озвучки: {stats['failed_sentence_ids']}")
 
 
 def cmd_export_vocab() -> None:
@@ -66,6 +75,7 @@ def main() -> None:
     p_import.add_argument(
         "--tts", action="store_true", help="Одразу згенерувати MP3 озвучку"
     )
+    p_import.add_argument("--preview", action="store_true", help="Перевірити пакет без імпорту")
 
     sub.add_parser(
         "export-vocab", help="Вивести список усіх відомих слів користувача (i+1)"
@@ -78,7 +88,7 @@ def main() -> None:
 
     args = parser.parse_args()
     if args.command == "import":
-        cmd_import(args.file, args.tts)
+        cmd_import(args.file, args.tts, args.preview)
     elif args.command == "export-vocab":
         cmd_export_vocab()
     elif args.command == "tts":

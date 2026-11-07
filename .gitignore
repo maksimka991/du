@@ -6,6 +6,8 @@ __pycache__/
 venv/
 env/
 .env
+.du-data/
+.pytest_cache/
 
 # OS / IDE temporary files
 .DS_Store

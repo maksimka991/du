@@ -1,4 +1,3 @@
-import json
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -20,6 +19,8 @@ from backend.tts_service import (
     VOICE_DE_MALE,
     VOICE_UK,
 )
+
+from backend.pack import parse_pack
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_DIR = BASE_DIR / "frontend"
@@ -53,6 +54,7 @@ class PromptBuildRequest(BaseModel):
 class PackImportRequest(BaseModel):
     json_text: str
     generate_tts: bool = True
+    preview: bool = False
 
 
 class OnDemandTTSRequest(BaseModel):
@@ -68,7 +70,7 @@ async def startup_event():
     cards = get_all_cards()
     if not cards and STARTER_PACK_PATH.exists():
         try:
-            pack_data = json.loads(STARTER_PACK_PATH.read_text(encoding="utf-8"))
+            pack_data = parse_pack(STARTER_PACK_PATH.read_text(encoding="utf-8"))
             import_pack_data(pack_data)
             print("[Startup] Imported starter_pack.json into SQLite database.")
         except Exception as e:
@@ -197,33 +199,15 @@ def api_build_prompt(req: PromptBuildRequest):
 
 @app.post("/api/import-pack")
 async def api_import_pack(req: PackImportRequest):
-    raw = req.json_text.strip()
-    # Strip markdown code fences if user pasted ```json ... ```
-    if raw.startswith("```"):
-        lines = raw.splitlines()
-        if lines[0].startswith("```"):
-            lines = lines[1:]
-        if lines and lines[-1].strip().startswith("```"):
-            lines = lines[:-1]
-        raw = "\n".join(lines).strip()
-
     try:
-        pack_data = json.loads(raw)
-    except json.JSONDecodeError as e:
-        raise HTTPException(
-            status_code=400, detail=f"Помилка формату JSON: {str(e)}"
-        )
+        pack = parse_pack(req.json_text)
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
 
-    if "cards" not in pack_data or not isinstance(pack_data["cards"], list):
-        raise HTTPException(
-            status_code=400,
-            detail="У JSON відсутній масив 'cards'. Перевірте структуру пакету.",
-        )
-
-    result = import_pack_data(pack_data)
-    tts_stats = {"generated": 0, "failed": 0}
-    if req.generate_tts:
-        tts_stats = await generate_missing_audio_all(force=False)
+    result = import_pack_data(pack, preview=req.preview)
+    tts_stats = {"generated": 0, "failed": 0, "failed_sentence_ids": []}
+    if req.generate_tts and not req.preview:
+        tts_stats = await generate_missing_audio_all(sentence_ids=result["audio_sentence_ids"])
 
     return {"ok": True, "import": result, "tts": tts_stats}
 
@@ -245,7 +229,7 @@ async def api_tts_single(req: OnDemandTTSRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-app.mount("/audio", StaticFiles(directory=str(AUDIO_DIR)), name="audio")
+app.mount("/audio", StaticFiles(directory=str(AUDIO_DIR), check_dir=False), name="audio")
 app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
 
 

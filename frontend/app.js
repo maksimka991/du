@@ -247,7 +247,12 @@ function bindUIEvents() {
 
   document.getElementById("btn-generate-prompt").addEventListener("click", handleGeneratePrompt);
   document.getElementById("btn-copy-prompt").addEventListener("click", handleCopyPrompt);
-  document.getElementById("btn-import-json").addEventListener("click", handleImportJson);
+  document.getElementById("btn-import-json").addEventListener("click", () => handleImportJson(true));
+  document.getElementById("btn-confirm-import").addEventListener("click", () => handleImportJson(false));
+  document.getElementById("json-import-input").addEventListener("input", () => {
+    document.getElementById("btn-confirm-import").classList.add("hidden");
+    document.getElementById("import-status").classList.add("hidden");
+  });
   document.getElementById("btn-regenerate-all-tts").addEventListener("click", handleRegenerateAllTTS);
 }
 
@@ -1156,10 +1161,14 @@ async function handleCopyPrompt() {
   }, 1800);
 }
 
-async function handleImportJson() {
-  const jsonText = document.getElementById("json-import-input").value.trim();
+async function handleImportJson(preview) {
+  const input = document.getElementById("json-import-input");
+  const jsonText = input.value.trim();
   const generateTts = document.getElementById("import-run-tts").checked;
   const statusBox = document.getElementById("import-status");
+  const previewButton = document.getElementById("btn-import-json");
+  const confirmButton = document.getElementById("btn-confirm-import");
+  confirmButton.classList.add("hidden");
 
   if (!jsonText) {
     statusBox.textContent = "Будь ласка, вставте JSON-пакет у поле вище.";
@@ -1168,32 +1177,46 @@ async function handleImportJson() {
     return;
   }
 
-  statusBox.textContent = "⏳ Імпортуємо картки у SQLite та синтезуємо озвучку Edge-TTS...";
+  statusBox.textContent = preview ? "Перевіряємо пакет…" : "Зберігаємо пакет та готуємо озвучення…";
   statusBox.className = "status-box";
   statusBox.classList.remove("hidden");
 
+  previewButton.disabled = true;
+  input.readOnly = true;
   try {
     const res = await fetch("/api/import-pack", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ json_text: jsonText, generate_tts: generateTts }),
+      body: JSON.stringify({ json_text: jsonText, generate_tts: generateTts, preview }),
     });
     const data = await res.json();
     if (!res.ok) {
       throw new Error(data.detail || "Помилка імпорту");
     }
 
-    statusBox.innerHTML = `
-      ✅ <strong>Успішно імпортовано!</strong> Додано карток: <b>${data.import.imported_cards}</b>,
-      речень: <b>${data.import.imported_sentences}</b>.
-      Озвучено нових речень: <b>${data.tts.generated}</b>.
-      Перейдіть на вкладку «Усі», щоб почати навчання!
-    `;
-    await loadCards();
+    const { new: added, changed, unchanged } = data.import.counts;
+    const summary = `Нових карток: ${added}. Змінених: ${changed}. Незмінних: ${unchanged}.`;
+    if (preview) {
+      statusBox.textContent = summary;
+      confirmButton.classList.toggle("hidden", added + changed === 0);
+    } else {
+      statusBox.textContent = `Пакет збережено. ${summary} ${audioStatsText(data.tts)}`;
+      await loadCards();
+    }
   } catch (err) {
     statusBox.textContent = `❌ ${err.message}`;
     statusBox.className = "status-box error";
+  } finally {
+    previewButton.disabled = false;
+    input.readOnly = false;
   }
+}
+
+function audioStatsText(stats) {
+  const retry = stats.failed
+    ? ` Потребують повторної озвучки (ID речень): ${stats.failed_sentence_ids.join(", ")}.`
+    : "";
+  return `Озвучено речень: ${stats.generated}.${retry}`;
 }
 
 async function handleRegenerateAllTTS() {
@@ -1205,7 +1228,8 @@ async function handleRegenerateAllTTS() {
   try {
     const res = await fetch("/api/generate-audio", { method: "POST" });
     const data = await res.json();
-    statusBox.innerHTML = `✅ Озвучку оновлено! Згенеровано нових комплектів аудіо: <b>${data.stats.generated}</b>.`;
+    if (!res.ok) throw new Error(data.detail || "Озвучення не вдалося");
+    statusBox.textContent = audioStatsText(data.stats);
     await loadCards();
   } catch (err) {
     statusBox.textContent = `❌ Помилка генерації озвучки: ${err.message}`;
